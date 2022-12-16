@@ -1,7 +1,7 @@
-HASH: a88de8775ab5b52929da9a01cca6e21a8f5a33b5
+HASH: 88435ac1aeb2fee5f5cdae7868a97819f2fef8fb
 ##############################################################
-WARNING: The next firmware tree is currently dormant
-
-Please use the master branch if you want the latest 5.15
-kernel and firmware.
+WARNING: This update bumps to rpi-6.0.y linux tree
+This update will install from the 'next' firmware branch.
+See discussions at:
+https://forums.raspberrypi.com/viewtopic.php?t=344246
 ##############################################################
