@@ -1,7 +1,7 @@
-HASH: 9c6362635308cb3034d22f42daf9bfda1e3d36de
+HASH: cfc8d43f048f18903031c70455e96377d5bff353
 #############################################################
-WARNING: This update bumps to rpi-5.15.y linux tree
-See: https://forums.raspberrypi.com/viewtopic.php?t=322879
+WARNING: This update bumps to rpi-6.1.y linux tree
+See: https://forums.raspberrypi.com/viewtopic.php?t=344246
 
 'rpi-update' should only be used if there is a specific
 reason to do so - for example, a request by a Raspberry Pi
