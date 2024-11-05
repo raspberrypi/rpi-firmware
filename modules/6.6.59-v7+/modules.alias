@@ -449,6 +449,8 @@ alias of:N*T*Cnxp,pcf8574C* gpio_pcf857x
 alias of:N*T*Cnxp,pcf8574 gpio_pcf857x
 alias of:N*T*Cbrcm,bcm2835-pwmC* pwm_bcm2835
 alias of:N*T*Cbrcm,bcm2835-pwm pwm_bcm2835
+alias of:N*T*Cpwm-gpioC* pwm_gpio
+alias of:N*T*Cpwm-gpio pwm_gpio
 alias i2c:pca9685 pwm_pca9685
 alias of:N*T*Cnxp,pca9685-pwmC* pwm_pca9685
 alias of:N*T*Cnxp,pca9685-pwm pwm_pca9685

@@ -183,6 +183,7 @@ kernel/drivers/gpio/gpio-mockup.ko.xz:
 kernel/drivers/gpio/gpio-pca953x.ko.xz: kernel/drivers/base/regmap/regmap-i2c.ko.xz
 kernel/drivers/gpio/gpio-pcf857x.ko.xz:
 kernel/drivers/pwm/pwm-bcm2835.ko.xz:
+kernel/drivers/pwm/pwm-gpio.ko.xz:
 kernel/drivers/pwm/pwm-pca9685.ko.xz: kernel/drivers/base/regmap/regmap-i2c.ko.xz
 kernel/drivers/pwm/pwm-raspberrypi-poe.ko.xz:
 kernel/drivers/video/backlight/backlight.ko.xz:

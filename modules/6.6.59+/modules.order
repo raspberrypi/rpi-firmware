@@ -168,6 +168,7 @@ kernel/drivers/gpio/gpio-mockup.ko
 kernel/drivers/gpio/gpio-pca953x.ko
 kernel/drivers/gpio/gpio-pcf857x.ko
 kernel/drivers/pwm/pwm-bcm2835.ko
+kernel/drivers/pwm/pwm-gpio.ko
 kernel/drivers/pwm/pwm-pca9685.ko
 kernel/drivers/pwm/pwm-raspberrypi-poe.ko
 kernel/drivers/video/backlight/backlight.ko
