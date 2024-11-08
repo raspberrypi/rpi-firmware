@@ -5007,6 +5007,7 @@ alias symbol:tea5767_autodetection tea5767
 alias symbol:ceph_release_page_vector libceph
 alias symbol:drm_gem_private_object_init drm
 alias symbol:cx2341x_ctrl_query cx2341x
+alias symbol:drm_connector_create_rotation_property drm
 alias symbol:snd_pcm_alt_chmaps snd_pcm
 alias symbol:usbip_pad_iso usbip_core
 alias symbol:ata_bmdma_port_start32 libata

@@ -5307,6 +5307,7 @@ alias symbol:ceph_release_page_vector libceph
 alias symbol:drm_gem_private_object_init drm
 alias symbol:media_device_pci_init mc
 alias symbol:cx2341x_ctrl_query cx2341x
+alias symbol:drm_connector_create_rotation_property drm
 alias symbol:snd_pci_quirk_lookup_id snd
 alias symbol:snd_pcm_alt_chmaps snd_pcm
 alias symbol:usbip_pad_iso usbip_core
