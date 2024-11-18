@@ -185,6 +185,7 @@ kernel/drivers/gpio/gpio-pcf857x.ko.xz:
 kernel/drivers/pwm/pwm-bcm2835.ko.xz:
 kernel/drivers/pwm/pwm-gpio.ko.xz:
 kernel/drivers/pwm/pwm-pca9685.ko.xz: kernel/drivers/base/regmap/regmap-i2c.ko.xz
+kernel/drivers/pwm/pwm-pio-rp1.ko.xz: kernel/drivers/misc/rp1-pio.ko.xz kernel/drivers/firmware/rp1.ko.xz
 kernel/drivers/pwm/pwm-raspberrypi-poe.ko.xz:
 kernel/drivers/video/backlight/backlight.ko.xz:
 kernel/drivers/video/backlight/gpio_backlight.ko.xz: kernel/drivers/video/backlight/backlight.ko.xz
@@ -259,6 +260,7 @@ kernel/drivers/misc/eeprom/at25.ko.xz:
 kernel/drivers/misc/eeprom/eeprom_93cx6.ko.xz:
 kernel/drivers/misc/ti-st/st_drv.ko.xz:
 kernel/drivers/misc/bcm2835_smi.ko.xz:
+kernel/drivers/misc/rp1-pio.ko.xz: kernel/drivers/firmware/rp1.ko.xz
 kernel/drivers/mfd/arizona.ko.xz:
 kernel/drivers/mfd/arizona-i2c.ko.xz: kernel/drivers/mfd/arizona.ko.xz kernel/drivers/base/regmap/regmap-i2c.ko.xz
 kernel/drivers/mfd/arizona-spi.ko.xz: kernel/drivers/mfd/arizona.ko.xz kernel/drivers/base/regmap/regmap-spi.ko.xz
@@ -292,6 +294,7 @@ kernel/drivers/net/ethernet/qualcomm/qca_7k_common.ko.xz:
 kernel/drivers/net/ethernet/qualcomm/qcaspi.ko.xz: kernel/drivers/net/ethernet/qualcomm/qca_7k_common.ko.xz
 kernel/drivers/net/ethernet/qualcomm/qcauart.ko.xz: kernel/drivers/net/ethernet/qualcomm/qca_7k_common.ko.xz
 kernel/drivers/net/ethernet/realtek/r8169.ko.xz:
+kernel/drivers/net/ethernet/vertexcom/mse102x.ko.xz:
 kernel/drivers/net/ethernet/wiznet/w5100.ko.xz:
 kernel/drivers/net/ethernet/wiznet/w5100-spi.ko.xz: kernel/drivers/net/ethernet/wiznet/w5100.ko.xz
 kernel/drivers/net/hamradio/mkiss.ko.xz: kernel/net/ax25/ax25.ko.xz
@@ -1115,6 +1118,7 @@ kernel/drivers/leds/leds-pca9532.ko.xz:
 kernel/drivers/leds/leds-pca955x.ko.xz:
 kernel/drivers/leds/leds-pca963x.ko.xz:
 kernel/drivers/firmware/cirrus/cs_dsp.ko.xz:
+kernel/drivers/firmware/rp1.ko.xz:
 kernel/drivers/hid/uhid.ko.xz:
 kernel/drivers/hid/hid-a4tech.ko.xz:
 kernel/drivers/hid/hid-axff.ko.xz:
@@ -1228,6 +1232,7 @@ kernel/drivers/staging/fbtft/fb_tls8204.ko.xz: kernel/drivers/staging/fbtft/fbtf
 kernel/drivers/staging/fbtft/fb_uc1611.ko.xz: kernel/drivers/staging/fbtft/fbtft.ko.xz kernel/drivers/video/backlight/backlight.ko.xz
 kernel/drivers/staging/fbtft/fb_uc1701.ko.xz: kernel/drivers/staging/fbtft/fbtft.ko.xz kernel/drivers/video/backlight/backlight.ko.xz
 kernel/drivers/staging/fbtft/fb_upd161704.ko.xz: kernel/drivers/staging/fbtft/fbtft.ko.xz kernel/drivers/video/backlight/backlight.ko.xz
+kernel/drivers/mailbox/rp1-mailbox.ko.xz:
 kernel/drivers/perf/raspberrypi_axi_monitor.ko.xz:
 kernel/drivers/nvmem/nvmem-rmem.ko.xz:
 kernel/drivers/connector/cn.ko.xz:

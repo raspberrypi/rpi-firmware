@@ -1375,6 +1375,13 @@ alias pci:v000010ECd00008136sv*sd*bc*sc*i* r8169
 alias pci:v000010ECd00008129sv*sd*bc*sc*i* r8169
 alias pci:v000010ECd00002600sv*sd*bc*sc*i* r8169
 alias pci:v000010ECd00002502sv*sd*bc*sc*i* r8169
+alias spi:mse102x mse102x
+alias of:N*T*Cvertexcom,mse1022C* mse102x
+alias of:N*T*Cvertexcom,mse1022 mse102x
+alias of:N*T*Cvertexcom,mse1021C* mse102x
+alias of:N*T*Cvertexcom,mse1021 mse102x
+alias spi:mse1022 mse102x
+alias spi:mse1021 mse102x
 alias platform:w5100 w5100
 alias of:N*T*Cwiznet,w5500C* w5100_spi
 alias of:N*T*Cwiznet,w5500 w5100_spi

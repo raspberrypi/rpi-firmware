@@ -520,6 +520,8 @@ alias of:N*T*Cpwm-gpio pwm_gpio
 alias i2c:pca9685 pwm_pca9685
 alias of:N*T*Cnxp,pca9685-pwmC* pwm_pca9685
 alias of:N*T*Cnxp,pca9685-pwm pwm_pca9685
+alias of:N*T*Craspberrypi,pwm-pio-rp1C* pwm_pio_rp1
+alias of:N*T*Craspberrypi,pwm-pio-rp1 pwm_pio_rp1
 alias of:N*T*Craspberrypi,poe-pwmC* pwm_raspberrypi_poe
 alias of:N*T*Craspberrypi,poe-pwm pwm_raspberrypi_poe
 alias of:N*T*Craspberrypi,firmware-poe-pwmC* pwm_raspberrypi_poe
@@ -1181,6 +1183,8 @@ alias spi:at25 at25
 alias platform:smi-bcm2835 bcm2835_smi
 alias of:N*T*Cbrcm,bcm2835-smiC* bcm2835_smi
 alias of:N*T*Cbrcm,bcm2835-smi bcm2835_smi
+alias of:N*T*Craspberrypi,rp1-pioC* rp1_pio
+alias of:N*T*Craspberrypi,rp1-pio rp1_pio
 alias i2c:wm1814 arizona_i2c
 alias i2c:wm8998 arizona_i2c
 alias i2c:wm8997 arizona_i2c
@@ -1467,6 +1471,13 @@ alias pci:v000010ECd00008136sv*sd*bc*sc*i* r8169
 alias pci:v000010ECd00008129sv*sd*bc*sc*i* r8169
 alias pci:v000010ECd00002600sv*sd*bc*sc*i* r8169
 alias pci:v000010ECd00002502sv*sd*bc*sc*i* r8169
+alias spi:mse102x mse102x
+alias of:N*T*Cvertexcom,mse1022C* mse102x
+alias of:N*T*Cvertexcom,mse1022 mse102x
+alias of:N*T*Cvertexcom,mse1021C* mse102x
+alias of:N*T*Cvertexcom,mse1021 mse102x
+alias spi:mse1022 mse102x
+alias spi:mse1021 mse102x
 alias platform:w5100 w5100
 alias of:N*T*Cwiznet,w5500C* w5100_spi
 alias of:N*T*Cwiznet,w5500 w5100_spi
@@ -10230,6 +10241,8 @@ alias of:N*T*Cnxp,pca9633C* leds_pca963x
 alias of:N*T*Cnxp,pca9633 leds_pca963x
 alias of:N*T*Cnxp,pca9632C* leds_pca963x
 alias of:N*T*Cnxp,pca9632 leds_pca963x
+alias of:N*T*Craspberrypi,rp1-firmwareC* rp1
+alias of:N*T*Craspberrypi,rp1-firmware rp1
 alias devname:uhid uhid
 alias char-major-10-239 uhid
 alias hid:b0003g*v000009DAp0000022B hid_a4tech
@@ -11282,6 +11295,8 @@ alias platform:fb_upd161704 fb_upd161704
 alias spi:fb_upd161704 fb_upd161704
 alias of:N*T*Cnec,upd161704C* fb_upd161704
 alias of:N*T*Cnec,upd161704 fb_upd161704
+alias of:N*T*Craspberrypi,rp1-mboxC* rp1_mailbox
+alias of:N*T*Craspberrypi,rp1-mbox rp1_mailbox
 alias of:N*T*Cbrcm,bcm2712-axiperfC* raspberrypi_axi_monitor
 alias of:N*T*Cbrcm,bcm2712-axiperf raspberrypi_axi_monitor
 alias of:N*T*Cbrcm,bcm2711-axiperfC* raspberrypi_axi_monitor

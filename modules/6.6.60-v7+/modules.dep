@@ -258,6 +258,7 @@ kernel/drivers/net/ethernet/microchip/enc28j60.ko.xz:
 kernel/drivers/net/ethernet/qualcomm/qca_7k_common.ko.xz:
 kernel/drivers/net/ethernet/qualcomm/qcaspi.ko.xz: kernel/drivers/net/ethernet/qualcomm/qca_7k_common.ko.xz
 kernel/drivers/net/ethernet/qualcomm/qcauart.ko.xz: kernel/drivers/net/ethernet/qualcomm/qca_7k_common.ko.xz
+kernel/drivers/net/ethernet/vertexcom/mse102x.ko.xz:
 kernel/drivers/net/ethernet/wiznet/w5100.ko.xz:
 kernel/drivers/net/ethernet/wiznet/w5100-spi.ko.xz: kernel/drivers/net/ethernet/wiznet/w5100.ko.xz
 kernel/drivers/net/hamradio/mkiss.ko.xz: kernel/net/ax25/ax25.ko.xz
