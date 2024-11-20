@@ -1,7 +1,7 @@
-HASH: 3a3b3ce1fa65d8085c418349ff3b723467a2c2e6
+HASH: 25474cdd4a7da57d7cc89b4e3de4f021f79b06ba
 ##############################################################
-WARNING: The next firmware tree is currently dormant
-
-Please use the master branch if you want the latest 6.6
-kernel and firmware.
+WARNING: This update bumps to rpi-6.12.y linux tree
+This update will install from the 'next' firmware branch.
+See discussions at:
+https://forums.raspberrypi.com/viewtopic.php?t=379745
 ##############################################################
