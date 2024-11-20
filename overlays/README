@@ -130,11 +130,28 @@ Name:   <The base DTB>
 Info:   Configures the base Raspberry Pi hardware
 Load:   <loaded automatically>
 Params:
-        ant1                    Select antenna 1 (default). CM4 only.
+        act_led_trigger         Choose which activity the LED tracks.
+                                Use "heartbeat" for a nice load indicator.
+                                (default "mmc")
 
-        ant2                    Select antenna 2. CM4 only.
+        act_led_activelow       Set to "on" to invert the sense of the LED
+                                (default "off")
+                                N.B. For Pi 3B, 3B+, 3A+ and 4B, use the act-led
+                                overlay.
 
-        noant                   Disable both antennas. CM4 only.
+        act_led_gpio            Set which GPIO to use for the activity LED
+                                (in case you want to connect it to an external
+                                device)
+                                (default "16" on a non-Plus board, "47" on a
+                                Plus or Pi 2)
+                                N.B. For Pi 3B, 3B+, 3A+ and 4B, use the act-led
+                                overlay.
+
+        ant1                    Select antenna 1 (default). CM4/5 only.
+
+        ant2                    Select antenna 2. CM4/5 only.
+
+        noant                   Disable both antennas. CM4/5 only.
 
         audio                   Set to "on" to enable the onboard ALSA audio
                                 interface (default "off")
@@ -154,21 +171,33 @@ Params:
         button_debounce         Set the debounce delay (in ms) on the power/
                                 shutdown button (default 50ms)
 
-        cam0_reg                Enables CAM 0 regulator.
-                                Only required on CM1 & 3.
+        cam0_reg                Controls CAM 0 regulator.
+                                Disabled by default on CM1 & 3.
+                                Enabled by default on all other boards.
 
         cam0_reg_gpio           Set GPIO for CAM 0 regulator.
-                                Default 31 on CM1, 3, and 4S.
-                                Default of GPIO expander 5 on CM4, but override
-                                switches to normal GPIO.
+                                NB override switches to the normal GPIO driver,
+                                even if the original was on the GPIO expander.
 
-        cam1_reg                Enables CAM 1 regulator.
-                                Only required on CM1 & 3.
+        cam1_reg                Controls CAM 1 regulator.
+                                Disabled by default on CM1 & 3.
+                                Enabled by default on all other boards.
 
         cam1_reg_gpio           Set GPIO for CAM 1 regulator.
-                                Default 3 on CM1, 3, and 4S.
-                                Default of GPIO expander 5 on CM4, but override
-                                switches to normal GPIO.
+                                NB override switches to the normal GPIO driver,
+                                even if the original was on the GPIO expander.
+
+        cam0_sync               Enable a GPIO to reflect frame sync from CSI0,
+                                going high on frame start, and low on frame end.
+
+        cam0_sync_inverted      Enable a GPIO to reflect frame sync from CSI0
+                                going low on frame start, and high on frame end.
+
+        cam1_sync               Enable a GPIO to reflect frame sync from CSI1,
+                                going high on frame start, and low on frame end.
+
+        cam1_sync_inverted      Enable a GPIO to reflect frame sync from CSI1
+                                going low on frame start, and high on frame end.
 
         cooling_fan             Enables the Pi 5 cooling fan (enabled
                                 automatically by the firmware)
@@ -300,6 +329,12 @@ Params:
 
         nvme                    Alias for "pciex1" (2712 only)
 
+        nvmem_cust_rw           Allow read/write access to customer otp
+
+        nvmem_mac_rw            Allow read/write access to mac addresses otp
+
+        nvmem_priv_rw           Allow read/write access to customer private otp
+
         pcie                    Set to "off" to disable the PCIe interface
                                 (default "on")
                                 (2711 only, but not applicable on CM4S)
@@ -322,12 +357,11 @@ Params:
         pciex1_tperst_clk_ms    Alias for pcie_tperst_clk_ms
                                 (2712 only, default "0")
 
-        spi                     Set to "on" to enable the spi interfaces
-                                (default "off")
-
-        spi_dma4                Use to enable 40-bit DMA on spi interfaces
-                                (the assigned value doesn't matter)
-                                (2711 only)
+        pwr_led_trigger
+        pwr_led_activelow
+        pwr_led_gpio
+                                As for act_led_*, but using the PWR LED.
+                                Not available on Model A/B boards.
 
         random                  Set to "on" to enable the hardware random
                                 number generator (default "on")
@@ -343,6 +377,10 @@ Params:
         sd                      Set to "off" to disable the SD card (or eMMC on
                                 non-lite SKU of CM4).
                                 (default "on")
+
+        sd_cqe                  Set to "off" to disable Command Queueing if you
+                                have an incompatible Class A2 SD card
+                                (Pi 5 only, default "on")
 
         sd_overclock            Clock (in MHz) to use when the MMC framework
                                 requests 50MHz
@@ -363,6 +401,19 @@ Params:
 
         sdio_overclock          Clock (in MHz) to use when the MMC framework
                                 requests 50MHz for the SDIO/WLAN interface.
+
+        spi                     Set to "on" to enable the spi interfaces
+                                (default "off")
+
+        spi_dma4                Use to enable 40-bit DMA on spi interfaces
+                                (the assigned value doesn't matter)
+                                (2711 only)
+
+        strict_gpiod            Return GPIOs to inputs when they are released.
+                                If using the gpiod utilities, it is necessary
+                                to keep a gpioset running (e.g. with
+                                --mode=wait) in order for an output value to
+                                persist.
 
         suspend                 Make the power button trigger a suspend rather
                                 than a power-off (2712 only, default "off")
@@ -387,29 +438,6 @@ Params:
                                 The value should be a 6-byte hexadecimal value,
                                 with or without colon separators, written in the
                                 natural (big-endian) order.
-
-        act_led_trigger         Choose which activity the LED tracks.
-                                Use "heartbeat" for a nice load indicator.
-                                (default "mmc")
-
-        act_led_activelow       Set to "on" to invert the sense of the LED
-                                (default "off")
-                                N.B. For Pi 3B, 3B+, 3A+ and 4B, use the act-led
-                                overlay.
-
-        act_led_gpio            Set which GPIO to use for the activity LED
-                                (in case you want to connect it to an external
-                                device)
-                                (default "16" on a non-Plus board, "47" on a
-                                Plus or Pi 2)
-                                N.B. For Pi 3B, 3B+, 3A+ and 4B, use the act-led
-                                overlay.
-
-        pwr_led_trigger
-        pwr_led_activelow
-        pwr_led_gpio
-                                As for act_led_*, but using the PWR LED.
-                                Not available on Model A/B boards.
 
         N.B. It is recommended to only enable those interfaces that are needed.
         Leaving all interfaces enabled can lead to unwanted behaviour (i2c_vc
@@ -868,6 +896,10 @@ Params: cam0-arducam-64mp       Select Arducam64MP for camera on port 0
         cam1-ov7251             Select OV7251 for camera on port 1
         cam1-ov9281             Select OV9281 for camera on port 1
         cam1-imx290-clk-freq    Set clock frequency for an IMX290 on port 1
+        cam0-sync-source        Set camera on port 0 as vsync source
+        cam0-sync-sink          Set camera on port 0 as vsync sink
+        cam1-sync-source        Set camera on port 1 as vsync source
+        cam1-sync-sink          Set camera on port 1 as vsync sink
 
         cam0                    Connect the mux to CAM0 port (default is CAM1)
 
@@ -929,6 +961,14 @@ Params: cam0-arducam-64mp       Select Arducam64MP for camera on port 0
         cam3-ov7251             Select OV7251 for camera on port 3
         cam3-ov9281             Select OV9281 for camera on port 3
         cam3-imx290-clk-freq    Set clock frequency for an IMX290 on port 3
+        cam0-sync-source        Set camera on port 0 as vsync source
+        cam0-sync-sink          Set camera on port 0 as vsync sink
+        cam1-sync-source        Set camera on port 1 as vsync source
+        cam1-sync-sink          Set camera on port 1 as vsync sink
+        cam2-sync-source        Set camera on port 2 as vsync source
+        cam2-sync-sink          Set camera on port 2 as vsync sink
+        cam3-sync-source        Set camera on port 3 as vsync source
+        cam3-sync-sink          Set camera on port 3 as vsync sink
 
         cam0                    Connect the mux to CAM0 port (default is CAM1)
 
@@ -937,6 +977,21 @@ Name:   cap1106
 Info:   Enables the ability to use the cap1106 touch sensor as a keyboard
 Load:   dtoverlay=cap1106,<param>=<val>
 Params: int_pin                 GPIO pin for interrupt signal (default 23)
+
+
+Name:   chipcap2
+Info:   Enables the Chipcap 2 humidity and temperature sensor. This device
+        provides low and high humidity alarms and requires a 3V3 dedicated
+        regulator to operate.
+Load:   dtoverlay=chipcap2,<param>=<val>
+Params: ready_pin               GPIO pin for ready signal (default 4)
+
+        low_pin                 GPIO pin for low humidity signal (default 5)
+
+        high_pin                GPIO pin for high humidity signal (default 6)
+
+        reg_pin                 GPIO pin to control the dedicated regulator
+                                that powers the device (default 26)
 
 
 Name:   chipdip-dac
@@ -1665,6 +1720,33 @@ Params: gpio_pin                GPIO pin to trigger on (default 3)
                                 (default 100)
 
 
+Name:   hd44780-i2c-lcd
+Info:   Configures an HD44780 compatible LCD display connected via a PCF8574 as
+        is often found as a backpack interface for these displays.
+Load:   dtoverlay=hd44780-i2c-lcd,<param>=<val>
+Params: addr                    I2C address of PCF8574
+        pin_d4                  GPIO pin for data pin D4 (default 4)
+
+        pin_d5                  GPIO pin for data pin D5 (default 5)
+
+        pin_d6                  GPIO pin for data pin D6 (default 6)
+
+        pin_d7                  GPIO pin for data pin D7 (default 7)
+
+        pin_en                  GPIO pin for "Enable" (default 2)
+
+        pin_rs                  GPIO pin for "Register Select" (default 0)
+
+        pin_rw                  GPIO pin for R/W select (default 1)
+
+        pin_bl                  GPIO pin for enabling/disabling the display
+                                backlight. (default 3)
+
+        display_height          Height of the display in characters (default 2)
+
+        display_width           Width of the display in characters (default 16)
+
+
 Name:   hd44780-lcd
 Info:   Configures an HD44780 compatible LCD display. Uses 4 gpio pins for
         data, 2 gpio pins for enable and register select and 1 optional pin
@@ -1685,9 +1767,9 @@ Params: pin_d4                  GPIO pin for data pin D4 (default 6)
         pin_bl                  Optional pin for enabling/disabling the
                                 display backlight. (default disabled)
 
-        display_height          Height of the display in characters
+        display_height          Height of the display in characters (default 2)
 
-        display_width           Width of the display in characters
+        display_width           Width of the display in characters (default 16)
 
 
 Name:   hdmi-backlight-hwhack-gpio
@@ -1702,6 +1784,19 @@ Params: gpio_pin                GPIO pin used (default 17)
                                 switched on when the wire goes low.
                                 Leave the default (value 0) if the backlight
                                 expects a high to switch it on.
+
+
+Name:   hifiberry-adc
+Info:   Configures the HifiBerry ADC audio card
+Load:   dtoverlay=hifiberry-adc,<param>=<val>
+Params: leds_off                If set to 'true' the onboard indicator LED
+                                is switched off at all times.
+
+
+Name:   hifiberry-adc8x
+Info:   Configures the HifiBerry ADC8X audio card (only on Pi5)
+Load:   dtoverlay=hifiberry-adc8x
+Params: <None>
 
 
 Name:   hifiberry-amp
@@ -1778,6 +1873,12 @@ Load:   dtoverlay=hifiberry-dac
 Params: <None>
 
 
+Name:   hifiberry-dac8x
+Info:   Configures the HifiBerry DAC8X audio cards (only on Pi5)
+Load:   dtoverlay=hifiberry-dac8x
+Params: <None>
+
+
 Name:   hifiberry-dacplus
 Info:   Configures the HifiBerry DAC+ audio card
 Load:   dtoverlay=hifiberry-dacplus,<param>=<val>
@@ -1801,6 +1902,48 @@ Params: 24db_digital_gain       Allow gain to be applied via the PCM512x codec
                                 are switched off at all times.
 
 
+Name:   hifiberry-dacplus-pro
+Info:   Configures the HifiBerry DAC+ PRO audio card (onboard clocks)
+Load:   dtoverlay=hifiberry-dacplus-pro,<param>=<val>
+Params: 24db_digital_gain       Allow gain to be applied via the PCM512x codec
+                                Digital volume control. Enable with
+                                "dtoverlay=hifiberry-dacplus,24db_digital_gain"
+                                (The default behaviour is that the Digital
+                                volume control is limited to a maximum of
+                                0dB. ie. it can attenuate but not provide
+                                gain. For most users, this will be desired
+                                as it will prevent clipping. By appending
+                                the 24dB_digital_gain parameter, the Digital
+                                volume control will allow up to 24dB of
+                                gain. If this parameter is enabled, it is the
+                                responsibility of the user to ensure that
+                                the Digital volume control is set to a value
+                                that does not result in clipping/distortion!)
+        leds_off                If set to 'true' the onboard indicator LEDs
+                                are switched off at all times.
+
+
+Name:   hifiberry-dacplus-std
+Info:   Configures the HifiBerry DAC+ standard audio card (no onboard clocks)
+Load:   dtoverlay=hifiberry-dacplus-std,<param>=<val>
+Params: 24db_digital_gain       Allow gain to be applied via the PCM512x codec
+                                Digital volume control. Enable with
+                                "dtoverlay=hifiberry-dacplus,24db_digital_gain"
+                                (The default behaviour is that the Digital
+                                volume control is limited to a maximum of
+                                0dB. ie. it can attenuate but not provide
+                                gain. For most users, this will be desired
+                                as it will prevent clipping. By appending
+                                the 24dB_digital_gain parameter, the Digital
+                                volume control will allow up to 24dB of
+                                gain. If this parameter is enabled, it is the
+                                responsibility of the user to ensure that
+                                the Digital volume control is set to a value
+                                that does not result in clipping/distortion!)
+        leds_off                If set to 'true' the onboard indicator LEDs
+                                are switched off at all times.
+
+
 Name:   hifiberry-dacplusadc
 Info:   Configures the HifiBerry DAC+ADC audio card
 Load:   dtoverlay=hifiberry-dacplusadc,<param>=<val>
@@ -1818,8 +1961,6 @@ Params: 24db_digital_gain       Allow gain to be applied via the PCM512x codec
                                 responsibility of the user to ensure that
                                 the Digital volume control is set to a value
                                 that does not result in clipping/distortion!)
-        slave                   Force DAC+ADC into slave mode, using Pi as
-                                master for bit clock and frame clock.
         leds_off                If set to 'true' the onboard indicator LEDs
                                 are switched off at all times.
 
@@ -2020,6 +2161,9 @@ Params: pca9542                 Select the NXP PCA9542 device
 
         addr                    Change I2C address of the device (default 0x70)
 
+        base                    Set an explicit base value for the channel bus
+                                numbers
+
         i2c0                    Choose the I2C0 bus on GPIOs 0&1
 
         i2c_csi_dsi             Choose the I2C0 bus on GPIOs 44&45
@@ -2035,6 +2179,9 @@ Params: pca9542                 Select the NXP PCA9542 device
 
         i2c6                    Choose the I2C6 bus (configure with the i2c6
                                 overlay - BCM2711 only)
+
+        disconnect_on_idle      Force the mux to disconnect all child buses
+                                after every transaction.
 
 
 [ The i2c-mux-pca9548a overlay has been deleted. See i2c-mux. ]
@@ -2082,6 +2229,8 @@ Params: abx80x                  Select one of the ABx80x family:
         pcf2127                 Select the PCF2127 device
 
         pcf2129                 Select the PCF2129 device
+
+        pcf2131                 Select the PCF2131 device
 
         pcf85063                Select the PCF85063 device
 
@@ -2177,6 +2326,8 @@ Params: abx80x                  Select one of the ABx80x family:
 
         pcf2129                 Select the PCF2129 device
 
+        pcf2131                 Select the PCF2131 device
+
         pcf85063                Select the PCF85063 device
 
         pcf85063a               Select the PCF85063A device
@@ -2238,10 +2389,11 @@ Name:   i2c-sensor
 Info:   Adds support for a number of I2C barometric pressure, temperature,
         light level and chemical sensors on i2c_arm
 Load:   dtoverlay=i2c-sensor,<param>=<val>
-Params: addr                    Set the address for the ADT7410, BH1750, BME280,
-                                BME680, BMP280, BMP380, CCS811, DS1621, HDC100X,
-                                JC42, LM75, MCP980x, MPU6050, MPU9250, MS5637,
-                                MS5803, MS5805, MS5837, MS8607, SHT3x or TMP102
+Params: addr                    Set the address for the ADT7410, AS73211,
+                                AS7331, BH1750, BME280, BME680, BMP280, BMP380,
+                                CCS811, DS1621, HDC100X, HDC3020, JC42, LM75,
+                                MCP980x, MPU6050, MPU9250, MS5637, MS5803,
+                                MS5805, MS5837, MS8607, SHT3x or TMP102
 
         adt7410                 Select the Analog Devices ADT7410 and ADT7420
                                 temperature sensors
@@ -2249,6 +2401,12 @@ Params: addr                    Set the address for the ADT7410, BH1750, BME280,
 
         aht10                   Select the Aosong AHT10 temperature and humidity
                                 sensor
+
+        as73211                 Select the AMS AS73211 XYZ true color sensor
+                                Valid addresses 0x74-0x77, default 0x74
+
+        as7331                  Select the AMS AS7331 spectral UV sensor
+                                Valid addresses 0x74-0x77, default 0x74
 
         bh1750                  Select the Rohm BH1750 ambient light sensor
                                 Valid addresses 0x23 or 0x5c, default 0x23
@@ -2281,10 +2439,17 @@ Params: addr                    Set the address for the ADT7410, BH1750, BME280,
         hdc100x                 Select the Texas Instruments HDC100x temp sensor
                                 Valid addresses 0x40-0x43, default 0x40
 
+        hdc3020                 Select the Texas Instruments HDC3020 temp sensor
+                                Valid addresses 0x44-0x47, default 0x44
+
+        hts221                  Select the HTS221 temperature and humidity
+                                sensor
+
         htu21                   Select the HTU21 temperature and humidity sensor
 
-        int_pin                 Set the GPIO to use for interrupts (max30102,
-                                mpu6050 and mpu9250 only)
+        int_pin                 Set the GPIO to use for interrupts (as73211,
+                                as7331, hdc3020, hts221, max30102, mpu6050 and
+                                mpu9250 only)
 
         jc42                    Select any of the many JEDEC JC42.4-compliant
                                 temperature sensors, including:
@@ -2365,6 +2530,9 @@ Params: addr                    Set the address for the ADT7410, BH1750, BME280,
                                 sensor
 
         veml6070                Select the Vishay VEML6070 ultraviolet light
+                                sensor
+
+        veml6075                Select the Vishay VEML6075 UVA and UVB light
                                 sensor
 
         i2c0                    Choose the I2C0 bus on GPIOs 0&1
@@ -2510,6 +2678,12 @@ Load:   dtoverlay=i2s-gpio28-31
 Params: <None>
 
 
+Name:   i2s-master-dac
+Info:   Configures a generic I2S DAC soundcard that acts as a clock master.
+Load:   dtoverlay=i2s-master-dac
+Params: <None>
+
+
 Name:   ilitek251x
 Info:   Enables I2C connected Ilitek 251x multiple touch controller using
         GPIO 4 (pin 7 on GPIO header) for interrupt.
@@ -2636,6 +2810,8 @@ Params: rotation                Mounting rotation of the camera sensor (0 or
                                 Compute Module (CSI0, i2c_vc, and cam0_reg).
         always-on               Leave the regulator powered up, to stop the
                                 camera clamping I/Os such as XVS to 0V.
+        sync-source             Configure as vsync source
+        sync-sink               Configure as vsync sink
 
 
 Name:   imx462
@@ -2676,6 +2852,29 @@ Params: rotation                Mounting rotation of the camera sensor (0 or
                                 Compute Module (CSI0, i2c_vc, and cam0_reg).
         always-on               Leave the regulator powered up, to stop the
                                 camera clamping I/Os such as XVS to 0V.
+        sync-source             Configure as vsync source
+        sync-sink               Configure as vsync sink
+
+
+Name:   imx500
+Info:   Sony IMX500 camera module.
+        Uses Unicam 1, which is the standard camera connector on most Pi
+        variants.
+Load:   dtoverlay=imx500,<param>=<val>
+Params: rotation                Mounting rotation of the camera sensor (0 or
+                                180, default 0)
+        orientation             Sensor orientation (0 = front, 1 = rear,
+                                2 = external, default external)
+        media-controller        Configure use of Media Controller API for
+                                configuring the sensor (default on)
+        cam0                    Adopt the default configuration for CAM0 on a
+                                Compute Module (CSI0, i2c_vc, and cam0_reg).
+        bypass-cache            Do save blocks of data to flash when using
+                                rp2040-gpio-bridge for SPI transfers.
+
+
+Name:   imx500-pi5
+Info:   See imx500 (this is the Pi 5 version)
 
 
 Name:   imx519
@@ -2712,6 +2911,18 @@ Params: rotation                Mounting rotation of the camera sensor (0 or
                                 Compute Module (CSI0, i2c_vc, and cam0_reg).
         link-frequency          Allowable link frequency values to use in Hz:
                                 450000000 (default), 447000000, 453000000.
+
+
+Name:   interludeaudio-analog
+Info:   Configures Interlude Audio Analog Hat audio card
+Load:   dtoverlay=interludeaudio-analog,<param>=<val>
+Params: gpiopin                 GPIO pin for codec reset
+
+
+Name:   interludeaudio-digital
+Info:   Configures Interlude Audio Digital Hat audio card
+Load:   dtoverlay=interludeaudio-digital
+Params: <None>
 
 
 Name:   iqaudio-codec
@@ -3428,6 +3639,20 @@ Info:   Force PCIe config to support 32bit DMA addresses at the expense of
 Load:   dtoverlay=pcie-32bit-dma-pi5
 Params: <None>
 
+
+Name:   pciex1-compat-pi5
+Info:   Compatibility features for pciex1 on Pi 5.
+Load:   dtoverlay=pciex1-compat-pi5,<param>=<val>
+Params: l1ss                    Enable ASPM L1 sub-state support
+        no-l0s                  Disable ASPM L0s
+        no-mip                  Revert to the MSI target in the RC, instead of
+                                the MSI-MIP peripheral. Use if a) more than 8
+                                interrupt vectors are required or b) the EP
+                                requires DMA and MSI addresses to be 32bit.
+        mmio-hi                 Move the start of outbound 32bit addresses to
+                                2GB and expand 64bit outbound space to 14GB.
+
+
 [ The pcf2127-rtc overlay has been deleted. See i2c-rtc. ]
 
 
@@ -3506,6 +3731,18 @@ Load:   dtoverlay=piglow
 Params: <None>
 
 
+Name:   pineboards-hat-ai
+Info:   Pineboards Hat Ai! overlay for the Google Coral Edge TPU
+Load:   dtoverlay=pineboards-hat-ai
+Params: <None>
+
+
+Name:   pineboards-hatdrive-poe-plus
+Info:   Configures the Pineboards HatDrive! PoE+
+Load:   dtoverlay=pineboards-hatdrive-poe-plus
+Params: <None>
+
+
 Name:   piscreen
 Info:   PiScreen display by OzzMaker.com
 Load:   dtoverlay=piscreen,<param>=<val>
@@ -3521,6 +3758,12 @@ Params: speed                   Display SPI bus speed
 
         drm                     Select the DRM/KMS driver instead of the FBTFT
                                 one
+
+        invx                    Touchscreen inverted x axis
+
+        invy                    Touchscreen inverted y axis
+
+        swapxy                  Touchscreen swapped x y axis
 
 
 Name:   piscreen2r
@@ -3694,6 +3937,12 @@ Params: pin                     Output pin (default 18) - see table
         clock                   PWM clock frequency (informational)
 
 
+Name:   pwm-gpio
+Info:   Configures the software PWM GPIO driver
+Load:   dtoverlay=pwm-gpio,<param>=<val>
+Params: gpio                    Output pin (default 4)
+
+
 Name:   pwm-ir-tx
 Info:   Use GPIO pin as pwm-assisted infrared transmitter output.
         This is an alternative to "gpio-ir-tx". pwm-ir-tx makes use
@@ -3726,7 +3975,7 @@ Params: clock                   PWM clock frequency (informational)
 
 
 Name:   qca7000
-Info:   in-tech's Evaluation Board for PLC Stamp micro
+Info:   Evaluation Board for PLC Stamp micro
         This uses spi0 and a separate GPIO interrupt to connect the QCA7000.
 Load:   dtoverlay=qca7000,<param>=<val>
 Params: int_pin                 GPIO pin for interrupt signal (default 23)
@@ -3735,7 +3984,7 @@ Params: int_pin                 GPIO pin for interrupt signal (default 23)
 
 
 Name:   qca7000-uart0
-Info:   in-tech's Evaluation Board for PLC Stamp micro (UART)
+Info:   Evaluation Board for PLC Stamp micro (UART)
         This uses uart0/ttyAMA0 over GPIOs 14 & 15 to connect the QCA7000.
         But it requires disabling of onboard Bluetooth on
         Pi 3B, 3B+, 3A+, 4B and Zero W.
@@ -4007,6 +4256,14 @@ Info:   Overlay for the NXP SC16IS750 UART with I2C Interface
 Load:   dtoverlay=sc16is750-i2c,<param>=<val>
 Params: int_pin                 GPIO used for IRQ (default 24)
         addr                    Address (default 0x48)
+        xtal                    On-board crystal frequency (default 14745600)
+
+
+Name:   sc16is750-spi0
+Info:   Overlay for the NXP SC16IS750 UART with SPI Interface
+        Enables the chip on SPI0.
+Load:   dtoverlay=sc16is750-spi0,<param>=<val>
+Params: int_pin                 GPIO used for IRQ (default 24)
         xtal                    On-board crystal frequency (default 14745600)
 
 
@@ -4533,6 +4790,14 @@ Params: speed                   SPI bus speed (default 10000000)
                                 (default=not set)
 
 
+Name:   ssd1327-spi
+Info:   Overlay for SSD1327 OLED via SPI using the DRM ssd130x driver.
+Load:   dtoverlay=ssd1327-spi,<param>=<val>
+Params: speed                   SPI bus speed (default 4500000)
+        dc_pin                  GPIO pin for D/C (default 24)
+        reset_pin               GPIO pin for RESET (default 25)
+
+
 Name:   ssd1331-spi
 Info:   Overlay for SSD1331 OLED via SPI using fbtft staging driver.
 Load:   dtoverlay=ssd1331-spi,<param>=<val>
@@ -4553,6 +4818,19 @@ Params: speed                   SPI bus speed (default 4500000)
         debug                   Debug output level (0-7; default 0)
         dc_pin                  GPIO pin for D/C (default 24)
         reset_pin               GPIO pin for RESET (default 25)
+
+
+Name:   sunfounder-pipower3
+Info:   Overlay for SunFounder PiPower 3
+Load:   dtoverlay=sunfounder-pipower3,<param>=<val>
+Params: poweroff_pin            Change poweroff pin (default 26)
+
+
+Name:   sunfounder-pironman5
+Info:   Overlay for SunFounder Pironman 5
+Load:   dtoverlay=sunfounder-pironman5,<param>=<val>
+Params: ir                      Enable IR or not (on or off, default on)
+        ir_pins                 Change IR receiver pin (default 13)
 
 
 Name:   superaudioboard
@@ -4763,8 +5041,10 @@ Params: <None>
 
 
 Name:   vc4-fkms-v3d
-Info:   Enable Eric Anholt's DRM VC4 V3D driver on top of the dispmanx
+Info:   Enable the kernel DRM VC4 V3D driver on top of the dispmanx
         display stack.
+        NB The firmware will not allow this overlay to load on a Pi with less
+        than 512MB as memory is too tight.
 Load:   dtoverlay=vc4-fkms-v3d,<param>
 Params: cma-512                 CMA is 512MB (needs 1GB)
         cma-448                 CMA is 448MB (needs 1GB)
@@ -4780,7 +5060,7 @@ Params: cma-512                 CMA is 512MB (needs 1GB)
 
 
 Name:   vc4-fkms-v3d-pi4
-Info:   Enable Eric Anholt's DRM VC4 V3D driver on top of the dispmanx
+Info:   Enable the kernel DRM VC4 V3D driver on top of the dispmanx
         display stack.
 Load:   dtoverlay=vc4-fkms-v3d-pi4,<param>
 Params: cma-512                 CMA is 512MB (needs 1GB)
@@ -4853,6 +5133,10 @@ Params: clock-frequency         Display clock frequency (Hz)
                                 Set the default brightness. Normal range 1-16.
                                 (default 16).
         rotate                  Display rotation {0,90,180,270} (default 0)
+        rgb-order               Allow override of RGB order from DPI.
+                                Options for vc4 are "rgb", "bgr", "grb", and
+                                "brg". Other values will be ignored.
+
 
 
 Name:   vc4-kms-dpi-hyperpixel2r
@@ -4963,6 +5247,34 @@ Params: clock-frequency         Display clock frequency (Hz)
                                 Only supported on Pi5 and CM
 
 
+Name:   vc4-kms-dsi-ili9881-5inch
+Info:   Enable the Raspberry Pi 5" ILI9881 based touchscreen panel.
+        Requires vc4-kms-v3d to be loaded.
+Load:   dtoverlay=vc4-kms-dsi-ili9881-5inch,<param>
+Params: sizex                   Touchscreen size x (default 720)
+        sizey                   Touchscreen size y (default 1280)
+        invx                    Touchscreen inverted x axis
+        invy                    Touchscreen inverted y axis
+        swapxy                  Touchscreen swapped x y axis
+        disable_touch           Disables the touch screen overlay driver
+        dsi0                    Use DSI0 and i2c_csi_dsi0 (rather than
+                                the default DSI1 and i2c_csi_dsi).
+
+
+Name:   vc4-kms-dsi-ili9881-7inch
+Info:   Enable the Raspberry Pi 7" ILI9881 based touchscreen panel.
+        Requires vc4-kms-v3d to be loaded.
+Load:   dtoverlay=vc4-kms-dsi-ili9881-7inch,<param>
+Params: sizex                   Touchscreen size x (default 720)
+        sizey                   Touchscreen size y (default 1280)
+        invx                    Touchscreen inverted x axis
+        invy                    Touchscreen inverted y axis
+        swapxy                  Touchscreen swapped x y axis
+        disable_touch           Disables the touch screen overlay driver
+        dsi0                    Use DSI0 and i2c_csi_dsi0 (rather than
+                                the default DSI1 and i2c_csi_dsi).
+
+
 Name:   vc4-kms-dsi-lt070me05000
 Info:   Enable a JDI LT070ME05000 DSI display on DSI1.
         Note that this is a 4 lane DSI device, so it will only work on a Compute
@@ -4984,6 +5296,23 @@ Load:   dtoverlay=vc4-kms-dsi-lt070me05000-v2
 Params: <None>
 
 
+Name:   vc4-kms-dsi-waveshare-800x480
+Info:   Enable the Waveshare 4.3" 800x480 DSI screen.
+        It tries to look like the Pi 7" display, but won't accept some of the
+        timings.
+        Includes the edt-ft5406 for the touchscreen element.
+        Requires vc4-kms-v3d to be loaded.
+Load:   dtoverlay=vc4-kms-dsi-waveshare-800x480,<param>=<val>
+Params: sizex                   Touchscreen size x (default 800)
+        sizey                   Touchscreen size y (default 480)
+        invx                    Touchscreen inverted x axis
+        invy                    Touchscreen inverted y axis
+        swapxy                  Touchscreen swapped x y axis
+        disable_touch           Disables the touch screen overlay driver
+        dsi0                    Use DSI0 and i2c_csi_dsi0 (rather than
+                                the default DSI1 and i2c_csi_dsi).
+
+
 Name:   vc4-kms-dsi-waveshare-panel
 Info:   Enable a Waveshare DSI touchscreen
         Includes the Goodix driver for the touchscreen element.
@@ -4999,6 +5328,10 @@ Load:   dtoverlay=vc4-kms-dsi-waveshare-panel,<param>=<val>
 Params: 2_8_inch                2.8" 480x640
         3_4_inch                3.4" 800x800 round
         4_0_inch                4.0" 480x800
+        4_0_inchC               4.0" 720x720
+        5_0_inch                5.0" 720x1280
+        6_25_inch               6.25" 720x1560
+        8_8_inch                8.8" 480x1920
         7_0_inchC               7.0" C 1024x600
         7_9_inch                7.9" 400x1280
         8_0_inch                8.0" 1280x800
@@ -5020,7 +5353,9 @@ Load:   <Deprecated>
 
 
 Name:   vc4-kms-v3d
-Info:   Enable Eric Anholt's DRM VC4 HDMI/HVS/V3D driver.
+Info:   Enable the kernel DRM VC4 HDMI/HVS/V3D driver.
+        NB The firmware will not allow this overlay to load on a Pi with less
+        than 512MB as memory is too tight.
 Load:   dtoverlay=vc4-kms-v3d,<param>
 Params: cma-512                 CMA is 512MB (needs 1GB)
         cma-448                 CMA is 448MB (needs 1GB)
@@ -5041,7 +5376,7 @@ Params: cma-512                 CMA is 512MB (needs 1GB)
 
 
 Name:   vc4-kms-v3d-pi4
-Info:   Enable Eric Anholt's DRM VC4 HDMI/HVS/V3D driver for Pi4.
+Info:   Enable the kernel DRM VC4 HDMI/HVS/V3D driver for Pi4.
 Load:   dtoverlay=vc4-kms-v3d-pi4,<param>
 Params: cma-512                 CMA is 512MB
         cma-448                 CMA is 448MB
