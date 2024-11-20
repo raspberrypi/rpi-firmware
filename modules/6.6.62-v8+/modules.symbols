@@ -189,6 +189,7 @@ alias symbol:spk_get_var speakup
 alias symbol:w1_add_master_device wire
 alias symbol:mt76_set_irq_mask mt76
 alias symbol:mt76x02_sta_ps mt76x02_lib
+alias symbol:rp1_pio_sm_drain_tx rp1_pio
 alias symbol:snd_pcm_hw_constraint_minmax snd_pcm
 alias symbol:v4l2_fh_is_singular videodev
 alias symbol:async_gen_syndrome async_pq
@@ -4441,6 +4442,7 @@ alias symbol:ipv6_dev_find ipv6
 alias symbol:nf_synproxy_ipv4_fini nf_synproxy_core
 alias symbol:dm_bufio_mark_buffer_dirty dm_bufio
 alias symbol:nf_conntrack_broadcast_help nf_conntrack_broadcast
+alias symbol:rp1_pio_sm_fifo_state rp1_pio
 alias symbol:sata_link_debounce libata
 alias symbol:v4l2_ctrl_get_menu videodev
 alias symbol:__nf_ct_refresh_acct nf_conntrack
