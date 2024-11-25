@@ -2812,6 +2812,8 @@ Params: rotation                Mounting rotation of the camera sensor (0 or
                                 camera clamping I/Os such as XVS to 0V.
         sync-source             Configure as vsync source
         sync-sink               Configure as vsync sink
+        link-frequency          Allowable link frequency values to use in Hz:
+                                450000000 (default), 453000000, 456000000.
 
 
 Name:   imx462
@@ -2854,6 +2856,8 @@ Params: rotation                Mounting rotation of the camera sensor (0 or
                                 camera clamping I/Os such as XVS to 0V.
         sync-source             Configure as vsync source
         sync-sink               Configure as vsync sink
+        link-frequency          Allowable link frequency values to use in Hz:
+                                450000000 (default), 453000000, 456000000.
 
 
 Name:   imx500
@@ -3956,6 +3960,14 @@ Params: gpio_pin                Output GPIO (default 18)
         func                    Pin function (default 2 = Alt5)
 
 
+Name:   pwm-pio
+Info:   Configures a GPIO pin as PIO-assisted PWM output. Unlike hardware PWM,
+        this can be used on any RP1 GPIO in bank 0 (0-27). Up to 4 are
+        supported, assuming nothing else is using PIO. Pi 5 only.
+Load:   dtoverlay=pwm-pio,<param>=<val>
+Params: gpio                    Output GPIO (0-27, default 4)
+
+
 Name:   pwm1
 Info:   Configures one or two PWM channel on PWM1 (BCM2711 only)
         N.B.:
@@ -4455,6 +4467,14 @@ Params: no_miso                 Don't claim and use the MISO pin (9), freeing
 Name:   spi0-1cs
 Info:   Only use one CS pin for SPI0
 Load:   dtoverlay=spi0-1cs,<param>=<val>
+Params: cs0_pin                 GPIO pin for CS0 (default 8)
+        no_miso                 Don't claim and use the MISO pin (9), freeing
+                                it for other uses.
+
+
+Name:   spi0-1cs-inverted
+Info:   Only use one CS pin for SPI0 and set to active-high
+Load:   dtoverlay=spi0-1cs-inverted,<param>=<val>
 Params: cs0_pin                 GPIO pin for CS0 (default 8)
         no_miso                 Don't claim and use the MISO pin (9), freeing
                                 it for other uses.
@@ -5271,6 +5291,7 @@ Params: sizex                   Touchscreen size x (default 720)
         invy                    Touchscreen inverted y axis
         swapxy                  Touchscreen swapped x y axis
         disable_touch           Disables the touch screen overlay driver
+        rotation                Display rotation {0,90,180,270} (default 0)
         dsi0                    Use DSI0 and i2c_csi_dsi0 (rather than
                                 the default DSI1 and i2c_csi_dsi).
 
