@@ -378,9 +378,9 @@ Params:
                                 non-lite SKU of CM4).
                                 (default "on")
 
-        sd_cqe                  Use to enable Command Queueing on the SD
-                                interface for faster Class A2 card performance
-                                (Pi 5 only, default "off")
+        sd_cqe                  Set to "off" to disable Command Queueing if you
+                                have an incompatible Class A2 SD card
+                                (Pi 5 only, default "on")
 
         sd_overclock            Clock (in MHz) to use when the MMC framework
                                 requests 50MHz
@@ -2780,6 +2780,8 @@ Params: rotation                Mounting rotation of the camera sensor (0 or
                                 camera clamping I/Os such as XVS to 0V.
         sync-source             Configure as vsync source
         sync-sink               Configure as vsync sink
+        link-frequency          Allowable link frequency values to use in Hz:
+                                450000000 (default), 453000000, 456000000.
 
 
 Name:   imx462
@@ -2822,6 +2824,8 @@ Params: rotation                Mounting rotation of the camera sensor (0 or
                                 camera clamping I/Os such as XVS to 0V.
         sync-source             Configure as vsync source
         sync-sink               Configure as vsync sink
+        link-frequency          Allowable link frequency values to use in Hz:
+                                450000000 (default), 453000000, 456000000.
 
 
 Name:   imx500
@@ -3903,6 +3907,12 @@ Params: pin                     Output pin (default 18) - see table
         clock                   PWM clock frequency (informational)
 
 
+Name:   pwm-gpio
+Info:   Configures the software PWM GPIO driver
+Load:   dtoverlay=pwm-gpio,<param>=<val>
+Params: gpio                    Output pin (default 4)
+
+
 Name:   pwm-ir-tx
 Info:   Use GPIO pin as pwm-assisted infrared transmitter output.
         This is an alternative to "gpio-ir-tx". pwm-ir-tx makes use
@@ -3914,6 +3924,14 @@ Load:   dtoverlay=pwm-ir-tx,<param>=<val>
 Params: gpio_pin                Output GPIO (default 18)
 
         func                    Pin function (default 2 = Alt5)
+
+
+Name:   pwm-pio
+Info:   Configures a GPIO pin as PIO-assisted PWM output. Unlike hardware PWM,
+        this can be used on any RP1 GPIO in bank 0 (0-27). Up to 4 are
+        supported, assuming nothing else is using PIO. Pi 5 only.
+Load:   dtoverlay=pwm-pio,<param>=<val>
+Params: gpio                    Output GPIO (0-27, default 4)
 
 
 Name:   pwm1
@@ -4415,6 +4433,14 @@ Params: no_miso                 Don't claim and use the MISO pin (9), freeing
 Name:   spi0-1cs
 Info:   Only use one CS pin for SPI0
 Load:   dtoverlay=spi0-1cs,<param>=<val>
+Params: cs0_pin                 GPIO pin for CS0 (default 8)
+        no_miso                 Don't claim and use the MISO pin (9), freeing
+                                it for other uses.
+
+
+Name:   spi0-1cs-inverted
+Info:   Only use one CS pin for SPI0 and set to active-high
+Load:   dtoverlay=spi0-1cs-inverted,<param>=<val>
 Params: cs0_pin                 GPIO pin for CS0 (default 8)
         no_miso                 Don't claim and use the MISO pin (9), freeing
                                 it for other uses.
@@ -5246,6 +5272,23 @@ Info:   Enable a JDI LT070ME05000 DSI display on DSI1 using Harlab's V2
         Requires vc4-kms-v3d to be loaded.
 Load:   dtoverlay=vc4-kms-dsi-lt070me05000-v2
 Params: <None>
+
+
+Name:   vc4-kms-dsi-waveshare-800x480
+Info:   Enable the Waveshare 4.3" 800x480 DSI screen.
+        It tries to look like the Pi 7" display, but won't accept some of the
+        timings.
+        Includes the edt-ft5406 for the touchscreen element.
+        Requires vc4-kms-v3d to be loaded.
+Load:   dtoverlay=vc4-kms-dsi-waveshare-800x480,<param>=<val>
+Params: sizex                   Touchscreen size x (default 800)
+        sizey                   Touchscreen size y (default 480)
+        invx                    Touchscreen inverted x axis
+        invy                    Touchscreen inverted y axis
+        swapxy                  Touchscreen swapped x y axis
+        disable_touch           Disables the touch screen overlay driver
+        dsi0                    Use DSI0 and i2c_csi_dsi0 (rather than
+                                the default DSI1 and i2c_csi_dsi).
 
 
 Name:   vc4-kms-dsi-waveshare-panel
