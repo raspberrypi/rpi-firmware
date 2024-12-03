@@ -187,6 +187,7 @@ kernel/drivers/regulator/arizona-micsupp.ko.xz: kernel/sound/soc/snd-soc-core.ko
 kernel/drivers/regulator/rpi-panel-attiny-regulator.ko.xz: kernel/drivers/video/backlight/backlight.ko.xz kernel/drivers/base/regmap/regmap-i2c.ko.xz
 kernel/drivers/regulator/rpi-panel-v2-regulator.ko.xz: kernel/drivers/video/backlight/backlight.ko.xz kernel/drivers/base/regmap/regmap-i2c.ko.xz
 kernel/drivers/tty/serial/sc16is7xx.ko.xz: kernel/drivers/base/regmap/regmap-spi.ko.xz kernel/drivers/base/regmap/regmap-i2c.ko.xz
+kernel/drivers/tty/serial/rpi-fw-uart.ko.xz:
 kernel/drivers/char/broadcom/bcm2835_smi_dev.ko.xz: kernel/drivers/misc/bcm2835_smi.ko.xz
 kernel/drivers/char/tpm/tpm.ko.xz:
 kernel/drivers/char/tpm/tpm_tis_core.ko.xz: kernel/drivers/char/tpm/tpm.ko.xz

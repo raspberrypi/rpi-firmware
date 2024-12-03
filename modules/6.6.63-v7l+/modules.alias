@@ -531,6 +531,8 @@ alias i2c:sc16is750 sc16is7xx
 alias i2c:sc16is741 sc16is7xx
 alias i2c:sc16is740 sc16is7xx
 alias i2c:sc16is74x sc16is7xx
+alias of:N*T*Craspberrypi,firmware-uartC* rpi_fw_uart
+alias of:N*T*Craspberrypi,firmware-uart rpi_fw_uart
 alias platform:smi-dev-bcm2835 bcm2835_smi_dev
 alias of:N*T*Cbrcm,bcm2835-smi-devC* bcm2835_smi_dev
 alias of:N*T*Cbrcm,bcm2835-smi-dev bcm2835_smi_dev
