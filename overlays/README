@@ -3570,6 +3570,8 @@ Params: rotation                Mounting rotation of the camera sensor (0 or
                                 configuring the sensor (default on)
         cam0                    Adopt the default configuration for CAM0 on a
                                 Compute Module (CSI0, i2c_vc, and cam0_reg).
+        arducam                 Slow down the regulator for slow Arducam
+                                modules.
 
 
 Name:   papirus
@@ -3733,6 +3735,14 @@ Name:   piglow
 Info:   Configures the PiGlow by pimoroni.com
 Load:   dtoverlay=piglow
 Params: <None>
+
+
+Name:   pimidi
+Info:   Configures the Blokas Labs Pimidi card
+Load:   dtoverlay=pimidi,<param>=<val>
+Params: sel                     The position used for the sel rotary switch.
+                                Each unit in the stack must be set on a unique
+                                position. If param is omitted, sel=0 is assumed.
 
 
 Name:   pineboards-hat-ai
@@ -4165,6 +4175,18 @@ Params: touchscreen-size-x      Touchscreen X resolution (default 800)
         touchscreen-inverted-x  Invert touchscreen X coordinates (default 0);
         touchscreen-inverted-y  Invert touchscreen Y coordinates (default 0);
         touchscreen-swapped-x-y Swap X and Y cordinates (default 0);
+
+
+Name:   rpi-fw-uart
+Info:   Configures the firmware software UART driver.
+        This driver requires exclusive usage of the second VPU core. The
+        following config.txt entries should be set when this driver is used.
+        dtparam=audio=off
+        isp_use_vpu0=1
+Load:   dtoverlay=rpi-fw-uart,<param>[=<val>]
+Params: txd0_pin                GPIO pin for TXD0 (any free - default 20)
+
+        rxd0_pin                GPIO pin for RXD0 (any free - default 21)
 
 
 Name:   rpi-poe
@@ -5358,6 +5380,8 @@ Params: 2_8_inch                2.8" 480x640
         8_0_inch                8.0" 1280x800
         10_1_inch               10.1" 1280x800
         11_9_inch               11.9" 320x1480
+        13_3_inch_4lane         13.3" 1920x1080 4lane
+        13_3_inch_2lane         13.3" 1920x1080 2lane
         i2c1                    Use i2c-1 with jumper wires from GPIOs 2&3
         disable_touch           Disable the touch controller
         rotation                Set the panel orientation property
