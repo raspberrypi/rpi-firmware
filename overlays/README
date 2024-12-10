@@ -3538,6 +3538,8 @@ Params: rotation                Mounting rotation of the camera sensor (0 or
                                 configuring the sensor (default on)
         cam0                    Adopt the default configuration for CAM0 on a
                                 Compute Module (CSI0, i2c_vc, and cam0_reg).
+        arducam                 Slow down the regulator for slow Arducam
+                                modules.
 
 
 Name:   papirus
@@ -5336,6 +5338,8 @@ Params: 2_8_inch                2.8" 480x640
         8_0_inch                8.0" 1280x800
         10_1_inch               10.1" 1280x800
         11_9_inch               11.9" 320x1480
+        13_3_inch_4lane         13.3" 1920x1080 4lane
+        13_3_inch_2lane         13.3" 1920x1080 2lane
         i2c1                    Use i2c-1 with jumper wires from GPIOs 2&3
         disable_touch           Disable the touch controller
         rotation                Set the panel orientation property

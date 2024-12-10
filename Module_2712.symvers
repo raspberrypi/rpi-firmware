@@ -1369,18 +1369,18 @@
 0xfb034961	event_triggers_call	vmlinux	EXPORT_SYMBOL_GPL	
 0x50a7141a	__trace_trigger_soft_disabled	vmlinux	EXPORT_SYMBOL_GPL	
 0x84208b9d	event_triggers_post_call	vmlinux	EXPORT_SYMBOL_GPL	
-0x9f4c38c2	bpf_trace_run1	vmlinux	EXPORT_SYMBOL_GPL	
-0x245d4555	bpf_trace_run2	vmlinux	EXPORT_SYMBOL_GPL	
-0x05f3ba89	bpf_trace_run3	vmlinux	EXPORT_SYMBOL_GPL	
-0x3c9d0ac2	bpf_trace_run4	vmlinux	EXPORT_SYMBOL_GPL	
-0xd2cbb53b	bpf_trace_run5	vmlinux	EXPORT_SYMBOL_GPL	
-0xb3d6cfd3	bpf_trace_run6	vmlinux	EXPORT_SYMBOL_GPL	
-0x9eedf3b4	bpf_trace_run7	vmlinux	EXPORT_SYMBOL_GPL	
-0xa0bc058e	bpf_trace_run8	vmlinux	EXPORT_SYMBOL_GPL	
-0x2dd7f418	bpf_trace_run9	vmlinux	EXPORT_SYMBOL_GPL	
-0x762a26ee	bpf_trace_run10	vmlinux	EXPORT_SYMBOL_GPL	
-0xc21c0b94	bpf_trace_run11	vmlinux	EXPORT_SYMBOL_GPL	
-0xa99a163f	bpf_trace_run12	vmlinux	EXPORT_SYMBOL_GPL	
+0x71eea1b6	bpf_trace_run1	vmlinux	EXPORT_SYMBOL_GPL	
+0xa9395d8c	bpf_trace_run2	vmlinux	EXPORT_SYMBOL_GPL	
+0x63c6b80e	bpf_trace_run3	vmlinux	EXPORT_SYMBOL_GPL	
+0x0fb1a122	bpf_trace_run4	vmlinux	EXPORT_SYMBOL_GPL	
+0x8edf82cd	bpf_trace_run5	vmlinux	EXPORT_SYMBOL_GPL	
+0xd4b4b879	bpf_trace_run6	vmlinux	EXPORT_SYMBOL_GPL	
+0xa42f3991	bpf_trace_run7	vmlinux	EXPORT_SYMBOL_GPL	
+0x06d93744	bpf_trace_run8	vmlinux	EXPORT_SYMBOL_GPL	
+0x51d98318	bpf_trace_run9	vmlinux	EXPORT_SYMBOL_GPL	
+0xb02fbee8	bpf_trace_run10	vmlinux	EXPORT_SYMBOL_GPL	
+0xc485fbf2	bpf_trace_run11	vmlinux	EXPORT_SYMBOL_GPL	
+0x3574c1eb	bpf_trace_run12	vmlinux	EXPORT_SYMBOL_GPL	
 0x532b90b5	kprobe_event_cmd_init	vmlinux	EXPORT_SYMBOL_GPL	
 0x890f4f97	__kprobe_event_gen_cmd_start	vmlinux	EXPORT_SYMBOL_GPL	
 0x7afcb7db	__kprobe_event_add_fields	vmlinux	EXPORT_SYMBOL_GPL	
@@ -1422,53 +1422,53 @@
 0xaf348da7	cpu_pm_exit	vmlinux	EXPORT_SYMBOL_GPL	
 0x01c6cb0c	cpu_cluster_pm_enter	vmlinux	EXPORT_SYMBOL_GPL	
 0xe85a9fd3	cpu_cluster_pm_exit	vmlinux	EXPORT_SYMBOL_GPL	
-0xf39aa838	bpf_prog_alloc	vmlinux	EXPORT_SYMBOL_GPL	
+0x8c884198	bpf_prog_alloc	vmlinux	EXPORT_SYMBOL_GPL	
 0xc9827693	__bpf_call_base	vmlinux	EXPORT_SYMBOL_GPL	
-0x7476637f	bpf_prog_select_runtime	vmlinux	EXPORT_SYMBOL_GPL	
-0x176ee60b	bpf_empty_prog_array	vmlinux	EXPORT_SYMBOL	
-0x90946627	bpf_prog_free	vmlinux	EXPORT_SYMBOL_GPL	
-0x4fb5eadf	bpf_event_output	vmlinux	EXPORT_SYMBOL_GPL	
+0x9e94d4b2	bpf_prog_select_runtime	vmlinux	EXPORT_SYMBOL_GPL	
+0x8791227e	bpf_empty_prog_array	vmlinux	EXPORT_SYMBOL	
+0xc67570dc	bpf_prog_free	vmlinux	EXPORT_SYMBOL_GPL	
+0x03af0c51	bpf_event_output	vmlinux	EXPORT_SYMBOL_GPL	
 0xf84bd6ee	bpf_stats_enabled_key	vmlinux	EXPORT_SYMBOL	
 0x92cb609e	__tracepoint_xdp_exception	vmlinux	EXPORT_SYMBOL_GPL	
-0xfbe337bf	__traceiter_xdp_exception	vmlinux	EXPORT_SYMBOL_GPL	
+0xb06cd275	__traceiter_xdp_exception	vmlinux	EXPORT_SYMBOL_GPL	
 0xa99b8e70	__SCK__tp_func_xdp_exception	vmlinux	EXPORT_SYMBOL_GPL	
 0x8f4f5b83	__tracepoint_xdp_bulk_tx	vmlinux	EXPORT_SYMBOL_GPL	
-0x1531ea3f	__traceiter_xdp_bulk_tx	vmlinux	EXPORT_SYMBOL_GPL	
+0x0a6a8810	__traceiter_xdp_bulk_tx	vmlinux	EXPORT_SYMBOL_GPL	
 0x2f1ea064	__SCK__tp_func_xdp_bulk_tx	vmlinux	EXPORT_SYMBOL_GPL	
-0xc815e0b9	bpf_map_put	vmlinux	EXPORT_SYMBOL_GPL	
-0x428be71e	bpf_map_inc	vmlinux	EXPORT_SYMBOL_GPL	
-0x086c21bb	bpf_map_inc_with_uref	vmlinux	EXPORT_SYMBOL_GPL	
-0x853d3f03	bpf_map_get	vmlinux	EXPORT_SYMBOL	
-0xe48455b0	bpf_map_inc_not_zero	vmlinux	EXPORT_SYMBOL_GPL	
-0xb3167a4a	bpf_prog_put	vmlinux	EXPORT_SYMBOL_GPL	
-0x85778552	bpf_prog_add	vmlinux	EXPORT_SYMBOL_GPL	
-0x5dc80fe4	bpf_prog_sub	vmlinux	EXPORT_SYMBOL_GPL	
-0xfb2ed206	bpf_prog_inc	vmlinux	EXPORT_SYMBOL_GPL	
-0x17f206db	bpf_prog_inc_not_zero	vmlinux	EXPORT_SYMBOL_GPL	
-0xc4492413	bpf_prog_get_type_dev	vmlinux	EXPORT_SYMBOL_GPL	
-0x056ac494	bpf_link_put	vmlinux	EXPORT_SYMBOL	
-0xda75fbf4	bpf_link_get_from_fd	vmlinux	EXPORT_SYMBOL	
+0x27bc2a1c	bpf_map_put	vmlinux	EXPORT_SYMBOL_GPL	
+0x56df13f0	bpf_map_inc	vmlinux	EXPORT_SYMBOL_GPL	
+0xc5358197	bpf_map_inc_with_uref	vmlinux	EXPORT_SYMBOL_GPL	
+0xebfd23af	bpf_map_get	vmlinux	EXPORT_SYMBOL	
+0xcc95dc50	bpf_map_inc_not_zero	vmlinux	EXPORT_SYMBOL_GPL	
+0x2376d98e	bpf_prog_put	vmlinux	EXPORT_SYMBOL_GPL	
+0xc7bdeb65	bpf_prog_add	vmlinux	EXPORT_SYMBOL_GPL	
+0xf8766ae7	bpf_prog_sub	vmlinux	EXPORT_SYMBOL_GPL	
+0x8abb14e4	bpf_prog_inc	vmlinux	EXPORT_SYMBOL_GPL	
+0x1ff7fbaf	bpf_prog_inc_not_zero	vmlinux	EXPORT_SYMBOL_GPL	
+0x19ba344d	bpf_prog_get_type_dev	vmlinux	EXPORT_SYMBOL_GPL	
+0xeb19b6df	bpf_link_put	vmlinux	EXPORT_SYMBOL	
+0x147d5807	bpf_link_get_from_fd	vmlinux	EXPORT_SYMBOL	
 0x8fb32e82	kern_sys_bpf	vmlinux	EXPORT_SYMBOL	
 0xbbe1e41d	bpf_prog_get_type_path	vmlinux	EXPORT_SYMBOL	
 0x1c89eb32	bpf_preload_ops	vmlinux	EXPORT_SYMBOL_GPL	
 0x7d1bb1d4	tnum_strn	vmlinux	EXPORT_SYMBOL_GPL	
-0xd391ff51	bpf_verifier_log_write	vmlinux	EXPORT_SYMBOL_GPL	
+0x014c89bf	bpf_verifier_log_write	vmlinux	EXPORT_SYMBOL_GPL	
 0x751d2e97	bpf_log	vmlinux	EXPORT_SYMBOL_GPL	
 0x0ecfea88	btf_type_by_id	vmlinux	EXPORT_SYMBOL_GPL	
-0x3f87f0b3	register_btf_kfunc_id_set	vmlinux	EXPORT_SYMBOL_GPL	
-0x08d710a1	register_btf_fmodret_id_set	vmlinux	EXPORT_SYMBOL_GPL	
-0x722e81f2	register_btf_id_dtor_kfuncs	vmlinux	EXPORT_SYMBOL_GPL	
-0x926e292e	bpf_offload_dev_match	vmlinux	EXPORT_SYMBOL_GPL	
-0x8a5865bb	bpf_offload_dev_netdev_register	vmlinux	EXPORT_SYMBOL_GPL	
-0x2709b159	bpf_offload_dev_netdev_unregister	vmlinux	EXPORT_SYMBOL_GPL	
-0x57723ae8	bpf_offload_dev_create	vmlinux	EXPORT_SYMBOL_GPL	
+0x28cc9149	register_btf_kfunc_id_set	vmlinux	EXPORT_SYMBOL_GPL	
+0x5fb93e61	register_btf_fmodret_id_set	vmlinux	EXPORT_SYMBOL_GPL	
+0xa6f50686	register_btf_id_dtor_kfuncs	vmlinux	EXPORT_SYMBOL_GPL	
+0xe962f400	bpf_offload_dev_match	vmlinux	EXPORT_SYMBOL_GPL	
+0xba31be31	bpf_offload_dev_netdev_register	vmlinux	EXPORT_SYMBOL_GPL	
+0x1846a991	bpf_offload_dev_netdev_unregister	vmlinux	EXPORT_SYMBOL_GPL	
+0xea83778f	bpf_offload_dev_create	vmlinux	EXPORT_SYMBOL_GPL	
 0x352ec68b	bpf_offload_dev_destroy	vmlinux	EXPORT_SYMBOL_GPL	
 0x1f563160	bpf_offload_dev_priv	vmlinux	EXPORT_SYMBOL_GPL	
 0xafa5e297	cgroup_bpf_enabled_key	vmlinux	EXPORT_SYMBOL	
-0xbd4db528	__cgroup_bpf_run_filter_skb	vmlinux	EXPORT_SYMBOL	
-0x554b01e9	__cgroup_bpf_run_filter_sk	vmlinux	EXPORT_SYMBOL	
-0x4ccb6242	__cgroup_bpf_run_filter_sock_addr	vmlinux	EXPORT_SYMBOL	
-0xd736d39e	__cgroup_bpf_run_filter_sock_ops	vmlinux	EXPORT_SYMBOL	
+0x8a8dfa1e	__cgroup_bpf_run_filter_skb	vmlinux	EXPORT_SYMBOL	
+0x1a9ae9eb	__cgroup_bpf_run_filter_sk	vmlinux	EXPORT_SYMBOL	
+0x84ec9008	__cgroup_bpf_run_filter_sock_addr	vmlinux	EXPORT_SYMBOL	
+0x09a349e4	__cgroup_bpf_run_filter_sock_ops	vmlinux	EXPORT_SYMBOL	
 0x638a9653	memory_add_physaddr_to_nid	vmlinux	EXPORT_SYMBOL_GPL	
 0xaab33bc6	phys_to_target_node	vmlinux	EXPORT_SYMBOL_GPL	
 0x83a5f900	perf_event_disable	vmlinux	EXPORT_SYMBOL_GPL	
@@ -9222,32 +9222,32 @@
 0xe0a5c8a4	inet_proto_csum_replace_by_diff	vmlinux	EXPORT_SYMBOL	
 0x6cdab796	linkwatch_fire_event	vmlinux	EXPORT_SYMBOL	
 0x6d09843f	copy_bpf_fprog_from_user	vmlinux	EXPORT_SYMBOL_GPL	
-0xcc99020a	sk_filter_trim_cap	vmlinux	EXPORT_SYMBOL	
-0x50b30d20	bpf_prog_create	vmlinux	EXPORT_SYMBOL_GPL	
-0xd0c7e8b3	bpf_prog_create_from_user	vmlinux	EXPORT_SYMBOL_GPL	
-0x1fc431a8	bpf_prog_destroy	vmlinux	EXPORT_SYMBOL_GPL	
-0x94f3fa90	sk_attach_filter	vmlinux	EXPORT_SYMBOL_GPL	
-0x2e52a594	bpf_redirect_info	vmlinux	EXPORT_SYMBOL_GPL	
+0xe0e24fc7	sk_filter_trim_cap	vmlinux	EXPORT_SYMBOL	
+0xbe81941a	bpf_prog_create	vmlinux	EXPORT_SYMBOL_GPL	
+0x86e28034	bpf_prog_create_from_user	vmlinux	EXPORT_SYMBOL_GPL	
+0x235381e8	bpf_prog_destroy	vmlinux	EXPORT_SYMBOL_GPL	
+0xa5796715	sk_attach_filter	vmlinux	EXPORT_SYMBOL_GPL	
+0xe6ca3b8e	bpf_redirect_info	vmlinux	EXPORT_SYMBOL_GPL	
 0xb9681621	xdp_do_flush	vmlinux	EXPORT_SYMBOL_GPL	
 0x146cc88f	bpf_master_redirect_enabled_key	vmlinux	EXPORT_SYMBOL_GPL	
-0xe762c929	xdp_master_redirect	vmlinux	EXPORT_SYMBOL_GPL	
-0xdc0eaa70	xdp_do_redirect	vmlinux	EXPORT_SYMBOL_GPL	
-0xf714d7a7	xdp_do_redirect_frame	vmlinux	EXPORT_SYMBOL_GPL	
-0x1c511c5e	ipv6_bpf_stub	vmlinux	EXPORT_SYMBOL_GPL	
+0x7b913a43	xdp_master_redirect	vmlinux	EXPORT_SYMBOL_GPL	
+0x03a994bf	xdp_do_redirect	vmlinux	EXPORT_SYMBOL_GPL	
+0x7726a795	xdp_do_redirect_frame	vmlinux	EXPORT_SYMBOL_GPL	
+0x1a79374d	ipv6_bpf_stub	vmlinux	EXPORT_SYMBOL_GPL	
 0xa041a619	nf_conn_btf_access_lock	vmlinux	EXPORT_SYMBOL_GPL	
-0xbc398499	nfct_btf_struct_access	vmlinux	EXPORT_SYMBOL_GPL	
-0xf8fe7a3c	bpf_warn_invalid_xdp_action	vmlinux	EXPORT_SYMBOL_GPL	
-0x2996c781	sk_detach_filter	vmlinux	EXPORT_SYMBOL_GPL	
+0xb357841d	nfct_btf_struct_access	vmlinux	EXPORT_SYMBOL_GPL	
+0xfcf8b08e	bpf_warn_invalid_xdp_action	vmlinux	EXPORT_SYMBOL_GPL	
+0x57475d71	sk_detach_filter	vmlinux	EXPORT_SYMBOL_GPL	
 0x3dac779a	bpf_sk_lookup_enabled	vmlinux	EXPORT_SYMBOL	
 0x03b814ca	bpf_dispatcher_xdp_func	vmlinux	EXPORT_SYMBOL	
 0x4e2893f1	sock_diag_check_cookie	vmlinux	EXPORT_SYMBOL_GPL	
 0x5626b79d	sock_diag_save_cookie	vmlinux	EXPORT_SYMBOL_GPL	
 0xb88fc9aa	sock_diag_put_meminfo	vmlinux	EXPORT_SYMBOL_GPL	
 0x56777a4b	sock_diag_put_filterinfo	vmlinux	EXPORT_SYMBOL	
-0x4e1b4c63	sock_diag_register_inet_compat	vmlinux	EXPORT_SYMBOL_GPL	
-0xeb8080a9	sock_diag_unregister_inet_compat	vmlinux	EXPORT_SYMBOL_GPL	
-0x082ae6c9	sock_diag_register	vmlinux	EXPORT_SYMBOL_GPL	
-0xc82dedb9	sock_diag_unregister	vmlinux	EXPORT_SYMBOL_GPL	
+0x481c8122	sock_diag_register_inet_compat	vmlinux	EXPORT_SYMBOL_GPL	
+0x1f9b0692	sock_diag_unregister_inet_compat	vmlinux	EXPORT_SYMBOL_GPL	
+0xb8acc6d7	sock_diag_register	vmlinux	EXPORT_SYMBOL_GPL	
+0xca1a292c	sock_diag_unregister	vmlinux	EXPORT_SYMBOL_GPL	
 0x8b9f4aca	sock_diag_destroy	vmlinux	EXPORT_SYMBOL_GPL	
 0x63e659b2	generic_hwtstamp_get_lower	vmlinux	EXPORT_SYMBOL	
 0xf5c7278a	generic_hwtstamp_set_lower	vmlinux	EXPORT_SYMBOL	
@@ -12569,6 +12569,97 @@
 0x381469cf	brcmf_fil_xtlv_data_get	drivers/net/wireless/broadcom/brcm80211/brcmfmac/brcmfmac	EXPORT_SYMBOL_GPL	BRCMFMAC
 0xd180d08f	brcmf_fwvid_register_vendor	drivers/net/wireless/broadcom/brcm80211/brcmfmac/brcmfmac	EXPORT_SYMBOL_GPL	BRCMFMAC
 0xe0d6a2e2	brcmf_fwvid_unregister_vendor	drivers/net/wireless/broadcom/brcm80211/brcmfmac/brcmfmac	EXPORT_SYMBOL_GPL	BRCMFMAC
+0xe9e751fe	iwl_write8	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x8d1b2bbb	iwl_write32	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x191b8c37	iwl_write64	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x67e96095	iwl_read32	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x282b0db2	iwl_poll_bit	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x8b02cd1a	iwl_read_direct32	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x536852eb	iwl_write_direct32	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xc768f567	iwl_write_direct64	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xf4df0242	iwl_poll_direct_bit	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x98b10683	iwl_read_prph_no_grab	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xa272aa71	iwl_write_prph_no_grab	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x6d9cad73	iwl_write_prph64_no_grab	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xb3a739d3	iwl_read_prph	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x915fd232	iwl_write_prph_delay	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x71b18734	iwl_set_bits_prph	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x988cf14e	iwl_set_bits_mask_prph	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x22322124	iwl_clear_bits_prph	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x0aab21a0	iwl_force_nmi	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x39beae78	iwl_finish_nic_init	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xa1c76a7f	iwl_drv_get_fwname_pre	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x828c6838	iwlwifi_mod_params	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x12d6b02c	iwl_opmode_register	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x5c52e109	iwl_opmode_deregister	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x7ce89f2a	__iwl_warn	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xe243e3f6	__iwl_info	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x0afe160c	__iwl_crit	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xf7c9192d	__iwl_err	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x26214f53	__iwl_dbg	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x99d352a3	iwl_read_eeprom	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xdf640c64	iwl_parse_eeprom_data	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x8623b616	iwl_phy_db_init	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x35033c81	iwl_phy_db_free	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xce0c6460	iwl_phy_db_set_section	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x776221bf	iwl_send_phy_db_data	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x7ae98abf	iwl_parse_mei_nvm_data	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xc91abf87	iwl_parse_nvm_data	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xa44f62db	iwl_parse_nvm_mcc_info	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xea1b26fc	iwl_nvm_fixups	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xd369a194	iwl_read_external_nvm	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x89564cc8	iwl_get_nvm	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xf24653a9	iwl_trans_pcie_remove	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL	
+0x51bf6193	iwl_dbg_tlv_del_timers	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xdeead215	_iwl_dbg_tlv_time_point	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x9e656fa5	iwl_trans_send_cmd	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x49ef596a	iwl_get_cmd_string	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x579a4be7	iwl_cmd_groups_verify_sorted	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x13863121	iwl_fw_lookup_cmd_ver	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	
+0x443a0ac3	iwl_fw_lookup_notif_ver	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	
+0x5987fe45	iwl_fw_lookup_assert_desc	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	
+0x5988395c	iwl_notification_wait_init	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xe75b7e77	iwl_notification_wait	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x1332e4de	iwl_abort_notification_waits	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xe0eb5838	iwl_init_notification_wait	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xf88964e4	iwl_remove_notification	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xbafc8994	iwl_wait_notification	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x874c77de	iwl_fw_rate_idx_to_plcp	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xb7d5ffb1	iwl_rate_mcs	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x84bb50e1	iwl_rs_pretty_ant	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xb37b318c	iwl_rs_pretty_bw	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x49e0135d	iwl_new_rate_from_v1	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x37956b72	rs_pretty_print_rate	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x78971d7e	iwl_he_is_sgi	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x2710c362	iwl_dump_desc_assert	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x24a74c55	iwl_fw_dbg_collect_desc	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x566bdc6d	iwl_fw_dbg_error_collect	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x6472d0d7	iwl_fw_dbg_collect	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xb5082931	iwl_fw_dbg_collect_trig	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x1f50a2d6	iwl_fw_start_dbg_conf	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xa88b3159	iwl_fw_dbg_read_d3_debug_data	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x7bce7ccb	iwl_fw_dbg_stop_sync	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xe50dcf27	iwl_fw_dbg_stop_restart_recording	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xa5aac9ef	iwl_pnvm_load	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xa00d39cb	iwl_fwrt_dump_error_logs	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xa1a40876	iwl_free_fw_paging	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xb607e30b	iwl_init_paging	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x049b4943	iwl_get_shared_mem_conf	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x8b58dd9b	iwl_fw_runtime_init	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xd0bf2e36	iwl_fw_runtime_suspend	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x1358a3cd	iwl_fw_runtime_resume	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x0acd907a	iwl_set_soc_latency	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xdeed7774	iwl_configure_rxq	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xa5d87ad9	iwl_uefi_get_step_table	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xb396913a	__tracepoint_iwlwifi_dev_ucode_event	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL	
+0xcc20e387	__traceiter_iwlwifi_dev_ucode_event	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL	
+0x970bf4ef	__SCK__tp_func_iwlwifi_dev_ucode_event	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL	
+0x9828a56a	__tracepoint_iwlwifi_dev_ucode_cont_event	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL	
+0x2619271c	__traceiter_iwlwifi_dev_ucode_cont_event	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL	
+0xd1e69877	__SCK__tp_func_iwlwifi_dev_ucode_cont_event	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL	
+0x0fa4d950	__tracepoint_iwlwifi_dev_ucode_wrap_event	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL	
+0x1b007b1a	__traceiter_iwlwifi_dev_ucode_wrap_event	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL	
+0x466ae44d	__SCK__tp_func_iwlwifi_dev_ucode_wrap_event	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL	
 0x01384d1a	hostap_80211_rx	drivers/net/wireless/intersil/hostap/hostap	EXPORT_SYMBOL	
 0xb7ef75db	hostap_master_start_xmit	drivers/net/wireless/intersil/hostap/hostap	EXPORT_SYMBOL	
 0x971f533f	hostap_init_data	drivers/net/wireless/intersil/hostap/hostap	EXPORT_SYMBOL	
@@ -14318,8 +14409,8 @@
 0x08402862	v4l2_print_dv_timings	drivers/media/v4l2-core/v4l2-dv-timings	EXPORT_SYMBOL_GPL	
 0xff585440	v4l2_dv_timings_aspect_ratio	drivers/media/v4l2-core/v4l2-dv-timings	EXPORT_SYMBOL_GPL	
 0x4839762f	v4l2_calc_timeperframe	drivers/media/v4l2-core/v4l2-dv-timings	EXPORT_SYMBOL_GPL	
-0xa97e00eb	v4l2_detect_cvt	drivers/media/v4l2-core/v4l2-dv-timings	EXPORT_SYMBOL_GPL	
-0x01612c0b	v4l2_detect_gtf	drivers/media/v4l2-core/v4l2-dv-timings	EXPORT_SYMBOL_GPL	
+0xd3ec68f3	v4l2_detect_cvt	drivers/media/v4l2-core/v4l2-dv-timings	EXPORT_SYMBOL_GPL	
+0xaca8a3ea	v4l2_detect_gtf	drivers/media/v4l2-core/v4l2-dv-timings	EXPORT_SYMBOL_GPL	
 0x2bf67def	v4l2_calc_aspect_ratio	drivers/media/v4l2-core/v4l2-dv-timings	EXPORT_SYMBOL_GPL	
 0xa22fbfeb	v4l2_hdmi_rx_colorimetry	drivers/media/v4l2-core/v4l2-dv-timings	EXPORT_SYMBOL_GPL	
 0x8f8d4341	v4l2_get_edid_phys_addr	drivers/media/v4l2-core/v4l2-dv-timings	EXPORT_SYMBOL_GPL	
@@ -17101,8 +17192,8 @@
 0x57748ccb	wiphy_delayed_work_queue	net/wireless/cfg80211	EXPORT_SYMBOL_GPL	
 0xb5a1c7c9	wiphy_delayed_work_cancel	net/wireless/cfg80211	EXPORT_SYMBOL_GPL	
 0x8716a4f7	wiphy_delayed_work_flush	net/wireless/cfg80211	EXPORT_SYMBOL_GPL	
-0x43afadee	ieee80211_radiotap_iterator_init	net/wireless/cfg80211	EXPORT_SYMBOL	
-0x7acb86ed	ieee80211_radiotap_iterator_next	net/wireless/cfg80211	EXPORT_SYMBOL	
+0xb3f40e25	ieee80211_radiotap_iterator_init	net/wireless/cfg80211	EXPORT_SYMBOL	
+0x57e81fc4	ieee80211_radiotap_iterator_next	net/wireless/cfg80211	EXPORT_SYMBOL	
 0xc3fb97ca	ieee80211_get_response_rate	net/wireless/cfg80211	EXPORT_SYMBOL	
 0x4abed7d4	ieee80211_mandatory_rates	net/wireless/cfg80211	EXPORT_SYMBOL	
 0x5584448a	ieee80211_channel_to_freq_khz	net/wireless/cfg80211	EXPORT_SYMBOL	
