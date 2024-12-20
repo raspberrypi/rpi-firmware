@@ -555,6 +555,7 @@ Params: addr                    I2C bus address of device. Set based on how the
                                 overlay - BCM2711 only)
         i2c6                    Choose the I2C6 bus (configure with the i2c6
                                 overlay - BCM2711 only)
+        i2c-path                Override I2C path to allow for i2c-gpio buses
 
         Channel parameters can be set for each enabled channel.
         A maximum of 4 channels can be enabled (letters a thru d).
@@ -1253,6 +1254,7 @@ Params: sizex                   Touchscreen size x (default 800)
         addr                    Sets the address for the touch controller. Note
                                 that the device must be configured to use the
                                 specified address.
+        i2c-path                Override I2C path to allow for i2c-gpio buses
 
 
 Name:   enc28j60
@@ -1452,8 +1454,10 @@ Name:   goodix
 Info:   Enables I2C connected Goodix gt9271 multiple touch controller using
         GPIOs 4 and 17 (pins 7 and 11 on GPIO header) for interrupt and reset.
 Load:   dtoverlay=goodix,<param>=<val>
-Params: interrupt               GPIO used for interrupt (default 4)
+Params: addr                    I2C address (default 0x14)
+        interrupt               GPIO used for interrupt (default 4)
         reset                   GPIO used for reset (default 17)
+        i2c-path                Override I2C path to allow for i2c-gpio buses
 
 
 Name:   googlevoicehat-soundcard
@@ -1745,6 +1749,7 @@ Params: addr                    I2C address of PCF8574
         display_height          Height of the display in characters (default 2)
 
         display_width           Width of the display in characters (default 16)
+        i2c-path                Override I2C path to allow for i2c-gpio buses
 
 
 Name:   hd44780-lcd
@@ -2110,6 +2115,8 @@ Params: addr                    Sets the address for the fan controller. Note
         i2c6                    Choose the I2C6 bus (configure with the i2c6
                                 overlay - BCM2711 only)
 
+        i2c-path                Override I2C path to allow for i2c-gpio buses
+
         minpwm                  PWM setting for the fan when the SoC is below
                                 mintemp (range 0-255. default 0)
         maxpwm                  PWM setting for the fan when the SoC is above
@@ -2180,6 +2187,8 @@ Params: pca9542                 Select the NXP PCA9542 device
         i2c6                    Choose the I2C6 bus (configure with the i2c6
                                 overlay - BCM2711 only)
 
+        i2c-path                Override I2C path to allow for i2c-gpio buses
+
         disconnect_on_idle      Force the mux to disconnect all child buses
                                 after every transaction.
 
@@ -2201,6 +2210,7 @@ Params: addr                    I2C address of PCA9685A (default 0x40)
                                 overlay - BCM2711 only)
         i2c6                    Choose the I2C6 bus (configure with the i2c6
                                 overlay - BCM2711 only)
+        i2c-path                Override I2C path to allow for i2c-gpio buses
 
 
 Name:   i2c-rtc
@@ -2269,6 +2279,8 @@ Params: abx80x                  Select one of the ABx80x family:
 
         i2c6                    Choose the I2C6 bus (configure with the i2c6
                                 overlay - BCM2711 only)
+
+        i2c-path                Override I2C path to allow for i2c-gpio buses
 
         addr                    Sets the address for the RTC. Note that the
                                 device must be configured to use the specified
@@ -2551,6 +2563,8 @@ Params: addr                    Set the address for the ADT7410, AS73211,
         i2c6                    Choose the I2C6 bus (configure with the i2c6
                                 overlay - BCM2711 only)
 
+        i2c-path                Override I2C path to allow for i2c-gpio buses
+
 
 Name:   i2c0
 Info:   Change i2c0 pin usage. Not all pin combinations are usable on all
@@ -2693,6 +2707,7 @@ Params: interrupt               GPIO used for interrupt (default 4)
                                 touchscreen (in pixels)
         sizey                   Touchscreen size y, vertical resolution of
                                 touchscreen (in pixels)
+        i2c-path                Override I2C path to allow for i2c-gpio buses
 
 
 Name:   imx219
@@ -3170,6 +3185,7 @@ Params: gpiopin                 Gpio pin connected to the INTA output of the
                                 overlay - BCM2711 only)
         i2c6                    Choose the I2C6 bus (configure with the i2c6
                                 overlay - BCM2711 only)
+        i2c-path                Override I2C path to allow for i2c-gpio buses
 
 
 Name:   mcp23s17
@@ -3619,6 +3635,17 @@ Params: addr                    I2C address of expander. Default 0x20.
         cat9554                 Select the Onnn CAT9554 (8 bit)
         pca9654                 Select the Onnn PCA9654 (8 bit)
         xra1202                 Select the Exar XRA1202 (8 bit)
+        i2c0                    Choose the I2C0 bus on GPIOs 0&1
+        i2c_csi_dsi             Choose the I2C0 bus on GPIOs 44&45
+        i2c3                    Choose the I2C3 bus (configure with the i2c3
+                                overlay - BCM2711 only)
+        i2c4                    Choose the I2C3 bus (configure with the i2c3
+                                overlay - BCM2711 only)
+        i2c5                    Choose the I2C5 bus (configure with the i2c4
+                                overlay - BCM2711 only)
+        i2c6                    Choose the I2C6 bus (configure with the i2c6
+                                overlay - BCM2711 only)
+        i2c-path                Override I2C path to allow for i2c-gpio buses
 
 
 Name:   pcf857x
@@ -3630,6 +3657,17 @@ Params: addr                    I2C address of expander. Default
         pcf8574a                Select the NXP PCF8574A (8 bit)
         pcf8575                 Select the NXP PCF8575 (16 bit)
         pca8574                 Select the NXP PCA8574 (8 bit)
+        i2c0                    Choose the I2C0 bus on GPIOs 0&1
+        i2c_csi_dsi             Choose the I2C0 bus on GPIOs 44&45
+        i2c3                    Choose the I2C3 bus (configure with the i2c3
+                                overlay - BCM2711 only)
+        i2c4                    Choose the I2C3 bus (configure with the i2c3
+                                overlay - BCM2711 only)
+        i2c5                    Choose the I2C5 bus (configure with the i2c4
+                                overlay - BCM2711 only)
+        i2c6                    Choose the I2C6 bus (configure with the i2c6
+                                overlay - BCM2711 only)
+        i2c-path                Override I2C path to allow for i2c-gpio buses
 
 
 Name:   pcie-32bit-dma
@@ -4291,6 +4329,17 @@ Load:   dtoverlay=sc16is750-i2c,<param>=<val>
 Params: int_pin                 GPIO used for IRQ (default 24)
         addr                    Address (default 0x48)
         xtal                    On-board crystal frequency (default 14745600)
+        i2c0                    Choose the I2C0 bus on GPIOs 0&1
+        i2c_csi_dsi             Choose the I2C0 bus on GPIOs 44&45
+        i2c3                    Choose the I2C3 bus (configure with the i2c3
+                                overlay - BCM2711 only)
+        i2c4                    Choose the I2C4 bus (configure with the i2c4
+                                overlay - BCM2711 only)
+        i2c5                    Choose the I2C5 bus (configure with the i2c5
+                                overlay - BCM2711 only)
+        i2c6                    Choose the I2C6 bus (configure with the i2c6
+                                overlay - BCM2711 only)
+        i2c-path                Override I2C path to allow for i2c-gpio buses
 
 
 Name:   sc16is750-spi0
@@ -4309,6 +4358,17 @@ Load:   dtoverlay=sc16is752-i2c,<param>=<val>
 Params: int_pin                 GPIO used for IRQ (default 24)
         addr                    Address (default 0x48)
         xtal                    On-board crystal frequency (default 14745600)
+        i2c0                    Choose the I2C0 bus on GPIOs 0&1
+        i2c_csi_dsi             Choose the I2C0 bus on GPIOs 44&45
+        i2c3                    Choose the I2C3 bus (configure with the i2c3
+                                overlay - BCM2711 only)
+        i2c4                    Choose the I2C4 bus (configure with the i2c4
+                                overlay - BCM2711 only)
+        i2c5                    Choose the I2C5 bus (configure with the i2c5
+                                overlay - BCM2711 only)
+        i2c6                    Choose the I2C6 bus (configure with the i2c6
+                                overlay - BCM2711 only)
+        i2c-path                Override I2C path to allow for i2c-gpio buses
 
 
 Name:   sc16is752-spi0
@@ -5141,6 +5201,7 @@ Params: clock-frequency         Display clock frequency (Hz)
         vsync-invert            Vertical sync active low
         de-invert               Data Enable active low
         pixclk-invert           Negative edge pixel clock
+        interlaced              Use an interlaced mode (where supported)
         width-mm                Define the screen width in mm
         height-mm               Define the screen height in mm
         rgb565                  Change to RGB565 output on GPIOs 0-19
