@@ -153,6 +153,12 @@ Params:
 
         noant                   Disable both antennas. CM4/5 only.
 
+        noanthogs               Disable the GPIO hogs on the antenna controls
+                                so they can be controlled at runtime. Note that
+                                using this parameter without suitable OS
+                                support will result in attenuated WiFi and
+                                Bluetooth signals. CM4/5 only.
+
         audio                   Set to "on" to enable the onboard ALSA audio
                                 interface (default "off")
 
@@ -301,10 +307,31 @@ Params:
         i2c_baudrate            An alias for i2c_arm_baudrate
 
         i2c_csi_dsi             Set to "on" to enable the i2c_csi_dsi interface
+                                The I2C bus and GPIOs are platform specific:
+                                  B rev 1:
+                                    i2c-1 on 2 & 3
+                                  B rev 2, B+, CM, Zero, Zero W, 2B, CM2, CM3,
+                                  CM4S:
+                                    i2c-0 on 28 & 29
+                                  3B, 3B+, Zero 2W, 4B, 400, CM4:
+                                    i2c-0 on 44 & 45
+                                  5, 500:
+                                    i2c-11/i2c-4 on 40 & 41
+                                  CM5 on CM5IO:
+                                    i2c-0 on 0 & 1
+                                  CM5 on CM4IO:
+                                    i2c-10/i2c-6 on 38 & 39
 
         i2c_csi_dsi0            Set to "on" to enable the i2c_csi_dsi0 interface
+                                The I2C bus and GPIOs are platform specific:
+                                  B rev 1 & 2, B+, CM, Zero, Zero W, 2B, CM2,
+                                  CM3, CM4S, 3B, 3B+, Zero 2W, 4B, 400, CM4,
+                                  CM5 on CM4IO:
+                                    i2c-0 on 0 & 1
+                                  5, 500, CM5 on CM5IO:
+                                    i2c-10/i2c-6 on 38 & 39
 
-        i2c_csi_dsi1            Set to "on" to enable the i2c_csi_dsi1 interface
+        i2c_csi_dsi1            A Pi 5 family-specific alias for i2c_csi_dsi.
 
         i2c_vc                  Set to "on" to enable the i2c interface
                                 usually reserved for the VideoCore processor
@@ -546,7 +573,12 @@ Params: addr                    I2C bus address of device. Set based on how the
                                 Amplifier for this channel. (Default 1 sets the
                                 full scale of the channel to 4.096 Volts)
         i2c0                    Choose the I2C0 bus on GPIOs 0&1
-        i2c_csi_dsi             Choose the I2C0 bus on GPIOs 44&45
+        i2c_csi_dsi             Choose the I2C bus connected to the main
+                                camera/display connector.
+                                See "dtparam -h i2c_csi_dsi" for details.
+        i2c_csi_dsi0            Choose the I2C bus connected to the second
+                                camera/display connector, if present.
+                                See "dtparam -h i2c_csi_dsi0" for details.
         i2c3                    Choose the I2C3 bus (configure with the i2c3
                                 overlay - BCM2711 only)
         i2c4                    Choose the I2C4 bus (configure with the i2c4
@@ -1283,6 +1315,12 @@ Params: interrupt               GPIO used for interrupt (default 4)
         invx                    Touchscreen inverted x axis
         invy                    Touchscreen inverted y axis
         swapxy                  Touchscreen swapped x y axis
+
+
+Name:   ezsound-6x8iso
+Info:   Overlay for the ezsound 6x8 isolated soundcard.
+Load:   dtoverlay=ezsound-6x8iso
+Params: <None>
 
 
 Name:   fbtft
@@ -2101,7 +2139,13 @@ Params: addr                    Sets the address for the fan controller. Note
 
         i2c0                    Choose the I2C0 bus on GPIOs 0&1
 
-        i2c_csi_dsi             Choose the I2C0 bus on GPIOs 44&45
+        i2c_csi_dsi             Choose the I2C bus connected to the main
+                                camera/display connector.
+                                See "dtparam -h i2c_csi_dsi" for details.
+
+        i2c_csi_dsi0            Choose the I2C bus connected to the second
+                                camera/display connector, if present.
+                                See "dtparam -h i2c_csi_dsi0" for details.
 
         i2c3                    Choose the I2C3 bus (configure with the i2c3
                                 overlay - BCM2711 only)
@@ -2173,7 +2217,13 @@ Params: pca9542                 Select the NXP PCA9542 device
 
         i2c0                    Choose the I2C0 bus on GPIOs 0&1
 
-        i2c_csi_dsi             Choose the I2C0 bus on GPIOs 44&45
+        i2c_csi_dsi             Choose the I2C bus connected to the main
+                                camera/display connector.
+                                See "dtparam -h i2c_csi_dsi" for details.
+
+        i2c_csi_dsi0            Choose the I2C bus connected to the second
+                                camera/display connector, if present.
+                                See "dtparam -h i2c_csi_dsi0" for details.
 
         i2c3                    Choose the I2C3 bus (configure with the i2c3
                                 overlay - BCM2711 only)
@@ -2201,7 +2251,12 @@ Info:   Adds support for an NXP PCA9685A I2C PWM controller on i2c_arm
 Load:   dtoverlay=i2c-pwm-pca9685a,<param>=<val>
 Params: addr                    I2C address of PCA9685A (default 0x40)
         i2c0                    Choose the I2C0 bus on GPIOs 0&1
-        i2c_csi_dsi             Choose the I2C0 bus on GPIOs 44&45
+        i2c_csi_dsi             Choose the I2C bus connected to the main
+                                camera/display connector.
+                                See "dtparam -h i2c_csi_dsi" for details.
+        i2c_csi_dsi0            Choose the I2C bus connected to the second
+                                camera/display connector, if present.
+                                See "dtparam -h i2c_csi_dsi0" for details.
         i2c3                    Choose the I2C3 bus (configure with the i2c3
                                 overlay - BCM2711 only)
         i2c4                    Choose the I2C3 bus (configure with the i2c3
@@ -2266,7 +2321,13 @@ Params: abx80x                  Select one of the ABx80x family:
 
         i2c0                    Choose the I2C0 bus on GPIOs 0&1
 
-        i2c_csi_dsi             Choose the I2C0 bus on GPIOs 44&45
+        i2c_csi_dsi             Choose the I2C bus connected to the main
+                                camera/display connector.
+                                See "dtparam -h i2c_csi_dsi" for details.
+
+        i2c_csi_dsi0            Choose the I2C bus connected to the second
+                                camera/display connector, if present.
+                                See "dtparam -h i2c_csi_dsi0" for details.
 
         i2c3                    Choose the I2C3 bus (configure with the i2c3
                                 overlay - BCM2711 only)
@@ -2549,7 +2610,12 @@ Params: addr                    Set the address for the ADT7410, AS73211,
 
         i2c0                    Choose the I2C0 bus on GPIOs 0&1
 
-        i2c_csi_dsi             Choose the I2C0 bus on GPIOs 44&45
+        i2c_csi_dsi             Choose the I2C bus connected to the main
+                                camera/display connector.
+                                See "dtparam -h i2c_csi_dsi" for details.
+        i2c_csi_dsi0            Choose the I2C bus connected to the second
+                                camera/display connector, if present.
+                                See "dtparam -h i2c_csi_dsi0" for details.
 
         i2c3                    Choose the I2C3 bus (configure with the i2c3
                                 overlay - BCM2711 only)
@@ -3176,7 +3242,12 @@ Params: gpiopin                 Gpio pin connected to the INTA output of the
         mcp23008                Configure an MCP23008 instead.
         noints                  Disable the interrupt GPIO line.
         i2c0                    Choose the I2C0 bus on GPIOs 0&1
-        i2c_csi_dsi             Choose the I2C0 bus on GPIOs 44&45
+        i2c_csi_dsi             Choose the I2C bus connected to the main
+                                camera/display connector.
+                                See "dtparam -h i2c_csi_dsi" for details.
+        i2c_csi_dsi0            Choose the I2C bus connected to the second
+                                camera/display connector, if present.
+                                See "dtparam -h i2c_csi_dsi0" for details.
         i2c3                    Choose the I2C3 bus (configure with the i2c3
                                 overlay - BCM2711 only)
         i2c4                    Choose the I2C4 bus (configure with the i2c4
@@ -3636,7 +3707,12 @@ Params: addr                    I2C address of expander. Default 0x20.
         pca9654                 Select the Onnn PCA9654 (8 bit)
         xra1202                 Select the Exar XRA1202 (8 bit)
         i2c0                    Choose the I2C0 bus on GPIOs 0&1
-        i2c_csi_dsi             Choose the I2C0 bus on GPIOs 44&45
+        i2c_csi_dsi             Choose the I2C bus connected to the main
+                                camera/display connector.
+                                See "dtparam -h i2c_csi_dsi" for details.
+        i2c_csi_dsi0            Choose the I2C bus connected to the second
+                                camera/display connector, if present.
+                                See "dtparam -h i2c_csi_dsi0" for details.
         i2c3                    Choose the I2C3 bus (configure with the i2c3
                                 overlay - BCM2711 only)
         i2c4                    Choose the I2C3 bus (configure with the i2c3
@@ -3658,7 +3734,12 @@ Params: addr                    I2C address of expander. Default
         pcf8575                 Select the NXP PCF8575 (16 bit)
         pca8574                 Select the NXP PCA8574 (8 bit)
         i2c0                    Choose the I2C0 bus on GPIOs 0&1
-        i2c_csi_dsi             Choose the I2C0 bus on GPIOs 44&45
+        i2c_csi_dsi             Choose the I2C bus connected to the main
+                                camera/display connector.
+                                See "dtparam -h i2c_csi_dsi" for details.
+        i2c_csi_dsi0            Choose the I2C bus connected to the second
+                                camera/display connector, if present.
+                                See "dtparam -h i2c_csi_dsi0" for details.
         i2c3                    Choose the I2C3 bus (configure with the i2c3
                                 overlay - BCM2711 only)
         i2c4                    Choose the I2C3 bus (configure with the i2c3
@@ -3993,6 +4074,46 @@ Name:   pwm-gpio
 Info:   Configures the software PWM GPIO driver
 Load:   dtoverlay=pwm-gpio,<param>=<val>
 Params: gpio                    Output pin (default 4)
+
+
+Name:   pwm-gpio-fan
+Info:   Configure a GPIO connected PWM cooling fan controlled by the
+        software-based GPIO PWM kernel module
+Load:   dtoverlay=pwm-gpio-fan,<param>=<val>
+Params: fan_gpio                BCM number of the pin driving the fan,
+                                default 18 (GPIO 18)
+        fan_temp0               CPU temperature at which fan is started with
+                                low speed in millicelsius,
+                                default 55000 (55 °C)
+        fan_temp1               CPU temperature at which fan is switched
+                                to medium speed in millicelsius,
+                                default 60000 (60 °C)
+        fan_temp2               CPU temperature at which fan is switched
+                                to high speed in millicelsius,
+                                default 67500 (67.5 °C)
+        fan_temp3               CPU temperature at which fan is switched
+                                to max speed in millicelsius,
+                                default 75000 (75 °C)
+        fan_temp0_hyst          Temperature hysteris at which fan is stopped
+                                in millicelsius,default 5000 (resulting
+                                in 50 °C)
+        fan_temp1_hyst          Temperature hysteris at which fan is switched
+                                back to low speed in millicelsius,
+                                default 5000 (resulting in 55 °C)
+        fan_temp2_hyst          Temperature hysteris at which fan is switched
+                                back to medium speed in millicelsius,
+                                default 5000 (resulting in 62.5 °C)
+        fan_temp3_hyst          Temperature hysteris at which fan is switched
+                                back to high speed in millicelsius,
+                                default 5000 (resulting in 70 °C)
+        fan_temp0_speed         Fan speed for low cooling state in range
+                                0 to 255, default 114 (45% PWM duty cycle)
+        fan_temp1_speed         Fan speed for medium cooling state in range
+                                0 to 255, default 152 (60% PWM duty cycle)
+        fan_temp2_speed         Fan speed for high cooling state in range
+                                0 to 255, default 204 (80% PWM duty cycle)
+        fan_temp3_speed         Fan speed for max cooling state in range
+                                0 to 255, default 255 (100% PWM duty cycle)
 
 
 Name:   pwm-ir-tx
@@ -4330,7 +4451,12 @@ Params: int_pin                 GPIO used for IRQ (default 24)
         addr                    Address (default 0x48)
         xtal                    On-board crystal frequency (default 14745600)
         i2c0                    Choose the I2C0 bus on GPIOs 0&1
-        i2c_csi_dsi             Choose the I2C0 bus on GPIOs 44&45
+        i2c_csi_dsi             Choose the I2C bus connected to the main
+                                camera/display connector.
+                                See "dtparam -h i2c_csi_dsi" for details.
+        i2c_csi_dsi0            Choose the I2C bus connected to the second
+                                camera/display connector, if present.
+                                See "dtparam -h i2c_csi_dsi0" for details.
         i2c3                    Choose the I2C3 bus (configure with the i2c3
                                 overlay - BCM2711 only)
         i2c4                    Choose the I2C4 bus (configure with the i2c4
@@ -4359,7 +4485,12 @@ Params: int_pin                 GPIO used for IRQ (default 24)
         addr                    Address (default 0x48)
         xtal                    On-board crystal frequency (default 14745600)
         i2c0                    Choose the I2C0 bus on GPIOs 0&1
-        i2c_csi_dsi             Choose the I2C0 bus on GPIOs 44&45
+        i2c_csi_dsi             Choose the I2C bus connected to the main
+                                camera/display connector.
+                                See "dtparam -h i2c_csi_dsi" for details.
+        i2c_csi_dsi0            Choose the I2C bus connected to the second
+                                camera/display connector, if present.
+                                See "dtparam -h i2c_csi_dsi0" for details.
         i2c3                    Choose the I2C3 bus (configure with the i2c3
                                 overlay - BCM2711 only)
         i2c4                    Choose the I2C4 bus (configure with the i2c4
@@ -5639,6 +5770,28 @@ Info:   Overlay for the Waveshare wm8960 soundcard
 Load:   dtoverlay=wm8960-soundcard,<param>=<val>
 Params: alsaname                Changes the card name in ALSA
         compatible              Changes the codec compatibility
+
+
+Name:   ws2812-pio
+Info:   Configures a GPIO pin to drive a string of WS2812 LEDS using pio. It
+        can be enabled on any RP1 GPIO in bank 0 (0-27). Up to 4 are supported,
+        assuming nothing else is using PIO. Pi 5 only.
+Load:   dtoverlay=ws2812-pio,<param>=<val>
+Params: brightness              Set the initial brightness for the LEDs. The
+                                brightness can be changed at runtime by writing
+                                a single byte to offset 0 of the device. Note
+                                that brightness is a multiplier for the pixel
+                                values, and only white pixels can reach the
+                                maximum visible brightness. (range 0-255,
+                                default 255)
+        dev_name                The name for the /dev/ device entry. Note that
+                                if the name includes '%d' it will be replaced
+                                by the instance number. (default 'leds%d')
+        gpio                    Output GPIO (0-27, default 4)
+        num_leds                Number of LEDs (default 60)
+        rgbw                    'rgbw=on' (or 'rgbw') indicates that each pixel
+                                includes a white LED as well as the usual red,
+                                green and blue. (default 'off')
 
 
 Troubleshooting
