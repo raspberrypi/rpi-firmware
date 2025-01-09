@@ -647,6 +647,7 @@ kernel/drivers/media/i2c/imx219.ko
 kernel/drivers/media/i2c/imx258.ko
 kernel/drivers/media/i2c/imx290.ko
 kernel/drivers/media/i2c/imx296.ko
+kernel/drivers/media/i2c/imx415.ko
 kernel/drivers/media/i2c/imx477.ko
 kernel/drivers/media/i2c/imx500.ko
 kernel/drivers/media/i2c/imx519.ko
