@@ -1037,6 +1037,7 @@ kernel/drivers/hwmon/emc2305.ko.xz:
 kernel/drivers/hwmon/gpio-fan.ko.xz:
 kernel/drivers/hwmon/iio_hwmon.ko.xz: kernel/drivers/iio/industrialio.ko.xz
 kernel/drivers/hwmon/ina2xx.ko.xz: kernel/drivers/base/regmap/regmap-i2c.ko.xz
+kernel/drivers/hwmon/ina238.ko.xz: kernel/drivers/base/regmap/regmap-i2c.ko.xz
 kernel/drivers/hwmon/jc42.ko.xz: kernel/drivers/base/regmap/regmap-i2c.ko.xz
 kernel/drivers/hwmon/lm75.ko.xz: kernel/drivers/base/regmap/regmap-i2c.ko.xz
 kernel/drivers/hwmon/pwm-fan.ko.xz:

@@ -9683,6 +9683,9 @@ alias of:N*T*Cti,ina220C* ina2xx
 alias of:N*T*Cti,ina220 ina2xx
 alias of:N*T*Cti,ina219C* ina2xx
 alias of:N*T*Cti,ina219 ina2xx
+alias i2c:ina238 ina238
+alias of:N*T*Cti,ina238C* ina238
+alias of:N*T*Cti,ina238 ina238
 alias i2c:jc42 jc42
 alias of:N*T*Cjedec,jc-42.4-tempC* jc42
 alias of:N*T*Cjedec,jc-42.4-temp jc42
