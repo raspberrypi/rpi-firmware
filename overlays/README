@@ -1003,6 +1003,21 @@ Load:   dtoverlay=cap1106,<param>=<val>
 Params: int_pin                 GPIO pin for interrupt signal (default 23)
 
 
+Name:   chipcap2
+Info:   Enables the Chipcap 2 humidity and temperature sensor. This device
+        provides low and high humidity alarms and requires a 3V3 dedicated
+        regulator to operate.
+Load:   dtoverlay=chipcap2,<param>=<val>
+Params: ready_pin               GPIO pin for ready signal (default 4)
+
+        low_pin                 GPIO pin for low humidity signal (default 5)
+
+        high_pin                GPIO pin for high humidity signal (default 6)
+
+        reg_pin                 GPIO pin to control the dedicated regulator
+                                that powers the device (default 26)
+
+
 Name:   chipdip-dac
 Info:   Configures Chip Dip audio cards.
 Load:   dtoverlay=chipdip-dac
@@ -1282,6 +1297,12 @@ Params: interrupt               GPIO used for interrupt (default 4)
         invx                    Touchscreen inverted x axis
         invy                    Touchscreen inverted y axis
         swapxy                  Touchscreen swapped x y axis
+
+
+Name:   ezsound-6x8iso
+Info:   Overlay for the ezsound 6x8 isolated soundcard.
+Load:   dtoverlay=ezsound-6x8iso
+Params: <None>
 
 
 Name:   fbtft
@@ -2374,10 +2395,11 @@ Name:   i2c-sensor
 Info:   Adds support for a number of I2C barometric pressure, temperature,
         light level and chemical sensors on i2c_arm
 Load:   dtoverlay=i2c-sensor,<param>=<val>
-Params: addr                    Set the address for the ADT7410, BH1750, BME280,
-                                BME680, BMP280, BMP380, CCS811, DS1621, HDC100X,
-                                JC42, LM75, MCP980x, MPU6050, MPU9250, MS5637,
-                                MS5803, MS5805, MS5837, MS8607, SHT3x or TMP102
+Params: addr                    Set the address for the ADT7410, AS73211,
+                                AS7331, BH1750, BME280, BME680, BMP280, BMP380,
+                                CCS811, DS1621, HDC100X, HDC3020, JC42, LM75,
+                                MCP980x, MPU6050, MPU9250, MS5637, MS5803,
+                                MS5805, MS5837, MS8607, SHT3x or TMP102
 
         i2c-bus                 Supports all the standard I2C bus selection
                                 parameters - see "dtoverlay -h i2c-bus"
@@ -2388,6 +2410,12 @@ Params: addr                    Set the address for the ADT7410, BH1750, BME280,
 
         aht10                   Select the Aosong AHT10 temperature and humidity
                                 sensor
+
+        as73211                 Select the AMS AS73211 XYZ true color sensor
+                                Valid addresses 0x74-0x77, default 0x74
+
+        as7331                  Select the AMS AS7331 spectral UV sensor
+                                Valid addresses 0x74-0x77, default 0x74
 
         bh1750                  Select the Rohm BH1750 ambient light sensor
                                 Valid addresses 0x23 or 0x5c, default 0x23
@@ -2424,6 +2452,12 @@ Params: addr                    Set the address for the ADT7410, BH1750, BME280,
         hdc100x                 Select the Texas Instruments HDC100x temp sensor
                                 Valid addresses 0x40-0x43, default 0x40
 
+        hdc3020                 Select the Texas Instruments HDC3020 temp sensor
+                                Valid addresses 0x44-0x47, default 0x44
+
+        hts221                  Select the HTS221 temperature and humidity
+                                sensor
+
         htu21                   Select the HTU21 temperature and humidity sensor
 
         ina238                  Select the TI INA238 power monitor. Valid
@@ -2431,8 +2465,9 @@ Params: addr                    Set the address for the ADT7410, BH1750, BME280,
                                 Uses parameters shunt-resistor and
                                 ti,shunt-gain for configuration
 
-        int_pin                 Set the GPIO to use for interrupts (max30102,
-                                mpu6050 and mpu9250 only)
+        int_pin                 Set the GPIO to use for interrupts (as73211,
+                                as7331, hdc3020, hts221, max30102, mpu6050 and
+                                mpu9250 only)
 
         jc42                    Select any of the many JEDEC JC42.4-compliant
                                 temperature sensors, including:
@@ -2520,6 +2555,9 @@ Params: addr                    Set the address for the ADT7410, BH1750, BME280,
                                 sensor
 
         veml6070                Select the Vishay VEML6070 ultraviolet light
+                                sensor
+
+        veml6075                Select the Vishay VEML6075 UVA and UVB light
                                 sensor
 
 
@@ -3657,6 +3695,8 @@ Params: l1ss                    Enable ASPM L1 sub-state support
                                 the MSI-MIP peripheral. Use if a) more than 8
                                 interrupt vectors are required or b) the EP
                                 requires DMA and MSI addresses to be 32bit.
+        mmio-hi                 Move the start of outbound 32bit addresses to
+                                2GB and expand 64bit outbound space to 14GB.
 
 
 [ The pcf2127-rtc overlay has been deleted. See i2c-rtc. ]
@@ -4082,13 +4122,6 @@ Params: base-addr               Where to place the capture buffer (default
                                 total-size / record-size = number of captures
                                 (default 16kB)
         console-size            Size of non-panic dmesg captures (default 0)
-
-
-Name:   rootmaster
-Info:   Overlay for OpenHydroponics RootMaster board.
-        https://openhydroponics.com/hw/rootmaster
-Load:   dtoverlay=rootmaster
-Params: <None>
 
 
 Name:   rotary-encoder
@@ -4881,6 +4914,14 @@ Params: speed                   SPI bus speed (default 10000000)
         height                  Display height (32 or 64; default 64)
         inverted                Set this if display is inverted and mirrored.
                                 (default=not set)
+
+
+Name:   ssd1327-spi
+Info:   Overlay for SSD1327 OLED via SPI using the DRM ssd130x driver.
+Load:   dtoverlay=ssd1327-spi,<param>=<val>
+Params: speed                   SPI bus speed (default 4500000)
+        dc_pin                  GPIO pin for D/C (default 24)
+        reset_pin               GPIO pin for RESET (default 25)
 
 
 Name:   ssd1331-spi
