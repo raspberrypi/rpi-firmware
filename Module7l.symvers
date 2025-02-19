@@ -12635,6 +12635,159 @@
 0xfca8838f	brcmf_fil_xtlv_data_get	drivers/net/wireless/broadcom/brcm80211/brcmfmac/brcmfmac	EXPORT_SYMBOL_GPL	BRCMFMAC
 0x4e8a22b4	brcmf_fwvid_register_vendor	drivers/net/wireless/broadcom/brcm80211/brcmfmac/brcmfmac	EXPORT_SYMBOL_GPL	BRCMFMAC
 0x07002983	brcmf_fwvid_unregister_vendor	drivers/net/wireless/broadcom/brcm80211/brcmfmac/brcmfmac	EXPORT_SYMBOL_GPL	BRCMFMAC
+0xe36c3a74	iwl_write8	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x1a789087	iwl_write32	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x03dcc7ad	iwl_write64	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x28cdea88	iwl_read32	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x4c7f180f	iwl_poll_bit	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x031b8f71	iwl_read_direct32	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xa8870065	iwl_write_direct32	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xb123574f	iwl_write_direct64	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xc4d798c5	iwl_poll_direct_bit	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x1743746a	iwl_read_prph_no_grab	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xce9c199c	iwl_write_prph_no_grab	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xe76e49cd	iwl_write_prph64_no_grab	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x93911f9d	iwl_read_prph	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xaea65ee3	iwl_write_prph_delay	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x68ef07e7	iwl_set_bits_prph	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x0b77e2b5	iwl_set_bits_mask_prph	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x9380fe8d	iwl_clear_bits_prph	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xf3dc44d2	iwl_force_nmi	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xb454bdc3	iwl_finish_nic_init	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x2ea7bbe7	iwl_drv_get_fwname_pre	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x828c6838	iwlwifi_mod_params	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xbbf44804	iwl_opmode_register	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x5c52e109	iwl_opmode_deregister	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x640fb561	__iwl_warn	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xcbd40076	__iwl_info	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x02e35ce1	__iwl_crit	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x5051a792	__iwl_err	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x2a85a66c	__iwl_dbg	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x3be2de7c	iwl_init_sband_channels	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x36c876df	iwl_init_ht_hw_capab	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x7ec32fa6	iwl_phy_db_init	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x35033c81	iwl_phy_db_free	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xce0c6460	iwl_phy_db_set_section	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x776221bf	iwl_send_phy_db_data	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x8aed21fe	iwl_reinit_cab	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x5baae626	iwl_parse_mei_nvm_data	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x51bd6c63	iwl_parse_nvm_data	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xbafceac8	iwl_parse_nvm_mcc_info	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xea1b26fc	iwl_nvm_fixups	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x6e244a47	iwl_read_external_nvm	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x22320a21	iwl_get_nvm	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x70815577	iwl_trans_pcie_send_hcmd	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xf3a1bd19	iwl_trans_pcie_remove	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL	
+0x6e89fe6f	iwl_dbg_tlv_del_timers	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x79762dd7	_iwl_dbg_tlv_time_point	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x7cd7c7a4	iwl_trans_send_cmd	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x1a148d40	iwl_get_cmd_string	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xc37f37a5	iwl_cmd_groups_verify_sorted	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x717a5a72	iwl_trans_configure	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x55083de4	iwl_trans_start_hw	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x0edee32c	iwl_trans_op_mode_leave	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x89c6610d	iwl_trans_write8	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x183cb0ee	iwl_trans_write32	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x1f386f39	iwl_trans_read32	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xdc2ee110	iwl_trans_read_prph	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x1c747b47	iwl_trans_write_prph	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x2bbc9b95	iwl_trans_read_mem	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xfc8fcf32	iwl_trans_write_mem	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x76e1c3a5	iwl_trans_set_pmi	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x7ca81e74	iwl_trans_sw_reset	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x4f3076e2	iwl_trans_dump_data	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x46dfbf52	iwl_trans_d3_suspend	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x557916ce	iwl_trans_d3_resume	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x27ee9039	iwl_trans_interrupts	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xaee5bf64	iwl_trans_sync_nmi	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xa10ca45f	iwl_trans_write_imr_mem	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x810cacbc	iwl_trans_set_bits_mask	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x4ec58a70	iwl_trans_read_config32	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x6be5dbeb	_iwl_trans_grab_nic_access	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xbe8f1ce7	iwl_trans_release_nic_access	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xcaf1cffd	iwl_trans_fw_alive	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x090eb3df	iwl_trans_start_fw	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x06b811e6	iwl_trans_stop_device	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xd3e41324	iwl_trans_tx	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xfb7ee9e6	iwl_trans_reclaim	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x5cf0a9cb	iwl_trans_txq_disable	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xe64fbc67	iwl_trans_txq_enable_cfg	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xa30c5431	iwl_trans_wait_txq_empty	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x3cdc6acf	iwl_trans_wait_tx_queues_empty	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xbe1450aa	iwl_trans_freeze_txq_timer	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x4685f0c0	iwl_trans_txq_set_shared_mode	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x42691f75	iwl_trans_set_q_ptrs	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x01f7cd7b	iwl_trans_txq_alloc	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x27ab420e	iwl_trans_txq_free	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x36cbc654	iwl_trans_get_rxq_dma_data	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x709667b7	iwl_trans_load_pnvm	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x8f53ee1f	iwl_trans_set_pnvm	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xd5a2bf00	iwl_trans_load_reduce_power	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xb41ee3f2	iwl_trans_set_reduce_power	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xeb2567e6	iwl_fw_lookup_cmd_ver	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	
+0x98d3a350	iwl_fw_lookup_notif_ver	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	
+0x5987fe45	iwl_fw_lookup_assert_desc	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	
+0xdec9e66d	iwl_notification_wait_init	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x5ef4a44d	iwl_notification_wait	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x93160e9e	iwl_abort_notification_waits	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x2c0f571f	iwl_init_notification_wait	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xb1e39cb3	iwl_remove_notification	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xd2de3cc1	iwl_wait_notification	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x874c77de	iwl_fw_rate_idx_to_plcp	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xb7d5ffb1	iwl_rate_mcs	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x84bb50e1	iwl_rs_pretty_ant	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xb37b318c	iwl_rs_pretty_bw	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x49e0135d	iwl_new_rate_from_v1	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x37956b72	rs_pretty_print_rate	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x78971d7e	iwl_he_is_sgi	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x1c48129a	iwl_dump_desc_assert	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xbaf7224e	iwl_fw_dbg_collect_desc	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x65535abf	iwl_fw_dbg_error_collect	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xa17c1a53	iwl_fw_dbg_collect	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xb78b2cfc	iwl_fw_dbg_collect_trig	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xc30f13ab	iwl_fw_start_dbg_conf	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x6c9e4c3a	iwl_fw_dbg_read_d3_debug_data	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x064874f6	iwl_fw_dbg_stop_sync	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x7c00a38a	iwl_fw_dbg_stop_restart_recording	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xefa463b4	iwl_fw_disable_dbg_asserts	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x5bbbd6b9	iwl_fw_dbg_clear_monitor_buf	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x0910de77	iwl_pnvm_load	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xc3557137	iwl_fwrt_dump_error_logs	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x11f6ae02	iwl_bios_get_wrds_table	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x4e58577e	iwl_bios_get_ewrd_table	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x3127adbd	iwl_bios_get_wgds_table	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xa089989b	iwl_bios_get_ppag_table	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xe7072544	iwl_bios_get_tas_table	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x895f78ae	iwl_bios_get_pwr_limit	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x78f4f3d4	iwl_bios_get_mcc	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x57a2a64c	iwl_bios_get_eckv	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x9a941979	iwl_bios_get_wbem	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xf5f3afe2	iwl_sar_geo_support	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xc6b27020	iwl_sar_geo_fill_table	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x37de2502	iwl_sar_fill_profile	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xa6ad48bd	iwl_fill_ppag_table	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xc39d4023	iwl_is_ppag_approved	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x7c55f97b	iwl_is_tas_approved	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x652b4377	iwl_fill_lari_config	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x334f1a45	iwl_bios_get_dsm	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x6e6d992a	iwl_puncturing_is_allowed_in_bios	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x08f792a0	iwl_free_fw_paging	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x8579289a	iwl_init_paging	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x38201d1f	iwl_get_shared_mem_conf	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x386e801b	iwl_fw_runtime_init	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x37ad3d70	iwl_fw_runtime_suspend	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xbd32a1fa	iwl_fw_runtime_resume	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0xfc0bc320	iwl_set_soc_latency	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x474dc7c0	iwl_configure_rxq	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL_GPL	IWLWIFI
+0x486f3e61	__tracepoint_iwlwifi_dev_ucode_event	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL	
+0x20fb9727	__traceiter_iwlwifi_dev_ucode_event	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL	
+0x970bf4ef	__SCK__tp_func_iwlwifi_dev_ucode_event	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL	
+0x8fbe22ca	__tracepoint_iwlwifi_dev_ucode_cont_event	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL	
+0x0e1f71e3	__traceiter_iwlwifi_dev_ucode_cont_event	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL	
+0xd1e69877	__SCK__tp_func_iwlwifi_dev_ucode_cont_event	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL	
+0x18325ef0	__tracepoint_iwlwifi_dev_ucode_wrap_event	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL	
+0x96873639	__traceiter_iwlwifi_dev_ucode_wrap_event	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL	
+0x466ae44d	__SCK__tp_func_iwlwifi_dev_ucode_wrap_event	drivers/net/wireless/intel/iwlwifi/iwlwifi	EXPORT_SYMBOL	
 0x35b350d6	p54_parse_eeprom	drivers/net/wireless/intersil/p54/p54common	EXPORT_SYMBOL_GPL	
 0x837d71db	p54_read_eeprom	drivers/net/wireless/intersil/p54/p54common	EXPORT_SYMBOL_GPL	
 0xf8d45045	p54_parse_firmware	drivers/net/wireless/intersil/p54/p54common	EXPORT_SYMBOL_GPL	
