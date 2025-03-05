@@ -871,6 +871,17 @@ Params: swap_lr                 Reverse the channel allocation, which will also
                                 pins are on different controllers)
 
 
+Name:   audremap-pi5
+Info:   On Raspberry Pi 5 / 500 /CM5, enable digital audio output
+        and route it to GPIOs 12 & 13 on the 40-pin header
+Load:   dtoverlay=audremap-pi5,<param>=<val>
+Params: swap_lr                 Reverse the channel allocation (default off)
+        pins_12_13              Select GPIOs 12 & 13 (default)
+        pins_18_19              Not available; this will not enable audio out
+        pins_40_41              Not available; this will not enable audio out
+        pins_40_45              Not available; this will not enable audio out
+
+
 Name:   balena-fin
 Info:   Overlay that enables WLAN, Bluetooth and the GPIO expander on the
         balenaFin carrier board for the Raspberry Pi Compute Module 3/3+ Lite.
@@ -4122,6 +4133,13 @@ Params: base-addr               Where to place the capture buffer (default
                                 total-size / record-size = number of captures
                                 (default 16kB)
         console-size            Size of non-panic dmesg captures (default 0)
+
+
+Name:   rootmaster
+Info:   Overlay for OpenHydroponics RootMaster board.
+        https://openhydroponics.com/hw/rootmaster
+Load:   dtoverlay=rootmaster
+Params: <None>
 
 
 Name:   rotary-encoder
