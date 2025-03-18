@@ -91,6 +91,7 @@ kernel/lib/asn1_decoder.ko
 kernel/lib/fonts/font.ko
 kernel/lib/oid_registry.ko
 kernel/lib/ucs2_string.ko
+kernel/drivers/irqchip/irq-bcm2712-mip.ko
 kernel/drivers/irqchip/irq-bcm7038-l1.ko
 kernel/drivers/irqchip/irq-bcm7120-l2.ko
 kernel/drivers/irqchip/irq-brcmstb-l2.ko
