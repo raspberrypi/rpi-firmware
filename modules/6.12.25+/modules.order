@@ -199,6 +199,7 @@ kernel/drivers/regulator/arizona-ldo1.ko
 kernel/drivers/regulator/arizona-micsupp.ko
 kernel/drivers/regulator/rpi-panel-attiny-regulator.ko
 kernel/drivers/regulator/rpi-panel-v2-regulator.ko
+kernel/drivers/regulator/waveshare-panel-regulator.ko
 kernel/drivers/tty/serial/rpi-fw-uart.ko
 kernel/drivers/tty/serial/sc16is7xx.ko
 kernel/drivers/tty/serial/sc16is7xx_spi.ko
@@ -219,6 +220,7 @@ kernel/drivers/gpu/drm/panel/panel-raspberrypi-touchscreen.ko
 kernel/drivers/gpu/drm/panel/panel-sitronix-st7701.ko
 kernel/drivers/gpu/drm/panel/panel-tdo-y17p.ko
 kernel/drivers/gpu/drm/panel/panel-waveshare-dsi.ko
+kernel/drivers/gpu/drm/panel/panel-waveshare-dsi-v2.ko
 kernel/drivers/gpu/drm/bridge/display-connector.ko
 kernel/drivers/gpu/drm/bridge/simple-bridge.ko
 kernel/drivers/gpu/drm/bridge/tc358762.ko
@@ -1032,6 +1034,7 @@ kernel/drivers/power/supply/ds2760_battery.ko
 kernel/drivers/power/supply/ltc2941-battery-gauge.ko
 kernel/drivers/power/supply/max17040_battery.ko
 kernel/drivers/power/supply/gpio-charger.ko
+kernel/drivers/hwmon/ads7828.ko
 kernel/drivers/hwmon/adt7x10.ko
 kernel/drivers/hwmon/adt7410.ko
 kernel/drivers/hwmon/aht10.ko

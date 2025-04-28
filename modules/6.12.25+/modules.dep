@@ -199,6 +199,7 @@ kernel/drivers/regulator/arizona-ldo1.ko.xz:
 kernel/drivers/regulator/arizona-micsupp.ko.xz: kernel/sound/soc/snd-soc-core.ko.xz kernel/sound/core/snd-compress.ko.xz kernel/sound/core/snd-pcm-dmaengine.ko.xz kernel/sound/core/snd-pcm.ko.xz kernel/sound/core/snd-timer.ko.xz kernel/sound/core/snd.ko.xz
 kernel/drivers/regulator/rpi-panel-attiny-regulator.ko.xz: kernel/drivers/video/backlight/backlight.ko.xz kernel/drivers/base/regmap/regmap-i2c.ko.xz
 kernel/drivers/regulator/rpi-panel-v2-regulator.ko.xz: kernel/drivers/video/backlight/backlight.ko.xz kernel/drivers/base/regmap/regmap-i2c.ko.xz
+kernel/drivers/regulator/waveshare-panel-regulator.ko.xz: kernel/drivers/video/backlight/backlight.ko.xz kernel/drivers/base/regmap/regmap-i2c.ko.xz
 kernel/drivers/tty/serial/rpi-fw-uart.ko.xz:
 kernel/drivers/tty/serial/sc16is7xx.ko.xz:
 kernel/drivers/tty/serial/sc16is7xx_spi.ko.xz: kernel/drivers/base/regmap/regmap-spi.ko.xz kernel/drivers/tty/serial/sc16is7xx.ko.xz
@@ -219,6 +220,7 @@ kernel/drivers/gpu/drm/panel/panel-raspberrypi-touchscreen.ko.xz: kernel/drivers
 kernel/drivers/gpu/drm/panel/panel-sitronix-st7701.ko.xz: kernel/drivers/gpu/drm/drm_mipi_dbi.ko.xz kernel/drivers/gpu/drm/drm_kms_helper.ko.xz kernel/drivers/gpu/drm/drm.ko.xz kernel/drivers/gpu/drm/drm_panel_orientation_quirks.ko.xz kernel/drivers/video/backlight/backlight.ko.xz
 kernel/drivers/gpu/drm/panel/panel-tdo-y17p.ko.xz: kernel/drivers/gpu/drm/drm.ko.xz kernel/drivers/gpu/drm/drm_panel_orientation_quirks.ko.xz kernel/drivers/video/backlight/backlight.ko.xz
 kernel/drivers/gpu/drm/panel/panel-waveshare-dsi.ko.xz: kernel/drivers/gpu/drm/drm.ko.xz kernel/drivers/gpu/drm/drm_panel_orientation_quirks.ko.xz kernel/drivers/video/backlight/backlight.ko.xz
+kernel/drivers/gpu/drm/panel/panel-waveshare-dsi-v2.ko.xz: kernel/drivers/gpu/drm/drm.ko.xz kernel/drivers/gpu/drm/drm_panel_orientation_quirks.ko.xz kernel/drivers/video/backlight/backlight.ko.xz
 kernel/drivers/gpu/drm/bridge/display-connector.ko.xz: kernel/drivers/gpu/drm/drm_kms_helper.ko.xz kernel/drivers/gpu/drm/drm.ko.xz kernel/drivers/gpu/drm/drm_panel_orientation_quirks.ko.xz kernel/drivers/video/backlight/backlight.ko.xz
 kernel/drivers/gpu/drm/bridge/simple-bridge.ko.xz: kernel/drivers/gpu/drm/drm_kms_helper.ko.xz kernel/drivers/gpu/drm/drm.ko.xz kernel/drivers/gpu/drm/drm_panel_orientation_quirks.ko.xz kernel/drivers/video/backlight/backlight.ko.xz
 kernel/drivers/gpu/drm/bridge/tc358762.ko.xz: kernel/drivers/gpu/drm/drm_kms_helper.ko.xz kernel/drivers/gpu/drm/drm.ko.xz kernel/drivers/gpu/drm/drm_panel_orientation_quirks.ko.xz kernel/drivers/video/backlight/backlight.ko.xz
@@ -1032,6 +1034,7 @@ kernel/drivers/power/supply/ds2760_battery.ko.xz: kernel/drivers/w1/wire.ko.xz k
 kernel/drivers/power/supply/ltc2941-battery-gauge.ko.xz:
 kernel/drivers/power/supply/max17040_battery.ko.xz: kernel/drivers/iio/industrialio.ko.xz kernel/drivers/base/regmap/regmap-i2c.ko.xz
 kernel/drivers/power/supply/gpio-charger.ko.xz:
+kernel/drivers/hwmon/ads7828.ko.xz: kernel/drivers/base/regmap/regmap-i2c.ko.xz
 kernel/drivers/hwmon/adt7x10.ko.xz:
 kernel/drivers/hwmon/adt7410.ko.xz: kernel/drivers/hwmon/adt7x10.ko.xz
 kernel/drivers/hwmon/aht10.ko.xz: kernel/lib/crc8.ko.xz
