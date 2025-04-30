@@ -402,7 +402,7 @@ Params:
                                 (2712 only, default "0")
 
         sd                      Set to "off" to disable the SD card (or eMMC on
-                                non-lite SKU of CM4).
+                                non-lite SKU of CM4/5).
                                 (default "on")
 
         sd_cqe                  Modify Command Queuing behaviour on the main SD
@@ -463,8 +463,8 @@ Params:
         uart1                   Set to "on" or "off" to enable or disable uart1
                                 (default varies)
 
-        watchdog                Set to "on" to enable the hardware watchdog
-                                (default "off")
+        watchdog                Set to "off" to disable the hardware watchdog
+                                (default "on")
 
         wifiaddr                Set an alternative WiFi MAC address.
                                 The value should be a 6-byte hexadecimal value,
@@ -602,6 +602,8 @@ Params: cs                      SPI bus Chip Select (default 1)
         pmax                    Maximum reported pressure value (default 65535)
         xohms                   Touchpanel sensitivity (X-plate resistance)
                                 (default 400)
+        invx                    Invert x axis
+        invy                    Invert y axis
 
         penirq is required and usually xohms (60-100) has to be set as well.
         Apart from that, pmax (255) and swapxy are also common.
@@ -2406,14 +2408,21 @@ Name:   i2c-sensor
 Info:   Adds support for a number of I2C barometric pressure, temperature,
         light level and chemical sensors on i2c_arm
 Load:   dtoverlay=i2c-sensor,<param>=<val>
-Params: addr                    Set the address for the ADT7410, AS73211,
-                                AS7331, BH1750, BME280, BME680, BMP280, BMP380,
-                                CCS811, DS1621, HDC100X, HDC3020, JC42, LM75,
-                                MCP980x, MPU6050, MPU9250, MS5637, MS5803,
-                                MS5805, MS5837, MS8607, SHT3x or TMP102
+Params: addr                    Set the address for the ADS7828, ADS7830,
+                                ADT7410, AS73211, AS7331, BH1750, BME280,
+                                BME680, BMP280, BMP380, CCS811, DS1621,
+                                HDC100X, HDC3020, JC42, LM75, MCP980x,
+                                MPU6050, MPU9250, MS5637, MS5803, MS5805,
+                                MS5837, MS8607, SHT3x or TMP102
 
         i2c-bus                 Supports all the standard I2C bus selection
                                 parameters - see "dtoverlay -h i2c-bus"
+
+        ads7828                 Select the TI ADS7828 50kHz 8-channel 12bit ADC
+                                Valid addresses 0x48-0x4b, default 0x48
+
+        ads7830                 Select the TI ADS7830 70kHz 8-channel 8bit ADC
+                                Valid addresses 0x48-0x4b, default 0x48
 
         adt7410                 Select the Analog Devices ADT7410 and ADT7420
                                 temperature sensors
@@ -2423,6 +2432,9 @@ Params: addr                    Set the address for the ADT7410, AS73211,
                                 accelerometer
 
         aht10                   Select the Aosong AHT10 temperature and humidity
+                                sensor
+
+        aht20                   Select the Aosong AHT20 temperature and humidity
                                 sensor
 
         as73211                 Select the AMS AS73211 XYZ true color sensor
@@ -2491,6 +2503,8 @@ Params: addr                    Set the address for the ADT7410, AS73211,
                                   SE97, SE98, STTS424(E), STTS2002, STTS3000,
                                   TSE2002, TSE2004, TS3000, and TS3001.
                                 The default address is 0x18.
+
+        label                   Set the device label (ADS7828 and ADS7830 only)
 
         lm75                    Select the Maxim LM75 temperature sensor
                                 Valid addresses 0x48-0x4f, default 0x4f
@@ -2562,11 +2576,17 @@ Params: addr                    Set the address for the ADT7410, AS73211,
         sgp30                   Select the Sensirion SGP30 VOC sensor.
                                 Fixed address 0x58.
 
+        tcs3472                 Select the AMS TAOS TCS3472 family of RGBW light
+                                sensors.
+                                Valid addresses 0x48-0x4b, default 0x48
+
         tmp102                  Select the Texas Instruments TMP102 temp sensor
                                 Valid addresses 0x48-0x4b, default 0x48
 
         tsl4531                 Select the AMS TSL4531 digital ambient light
                                 sensor
+
+        veml6040                Select the Vishay VEML6040 RGBW light sensor
 
         veml6070                Select the Vishay VEML6070 ultraviolet light
                                 sensor
@@ -2752,7 +2772,7 @@ Params: rotation                Mounting rotation of the camera sensor (0 or
                                 Compute Module (CSI0, i2c_vc, and cam0_reg).
         vcm                     Configure a VCM focus drive on the sensor.
         4lane                   Enable 4 CSI2 lanes. This requires a Compute
-                                Module (1, 3, or 4).
+                                Module (1, 3, 4, or 5) or Pi 5.
 
 
 Name:   imx290
@@ -2761,7 +2781,7 @@ Info:   Sony IMX290 camera module.
         variants.
 Load:   dtoverlay=imx290,<param>
 Params: 4lane                   Enable 4 CSI2 lanes. This requires a Compute
-                                Module (1, 3, or 4).
+                                Module (1, 3, 4, or 5) or Pi 5.
         clock-frequency         Sets the clock frequency to match that used on
                                 the board.
                                 Modules from Vision Components use 37.125MHz
@@ -2796,6 +2816,7 @@ Params: rotation                Mounting rotation of the camera sensor (0 or
                                 (the default), 37125000 or 74250000.
         always-on               Leave the regulator powered up, to stop the
                                 camera clamping I/Os such as XTRIG to 0V.
+        sync-sink               Configure as synchronisation sink.
 
 
 Name:   imx327
@@ -2804,7 +2825,7 @@ Info:   Sony IMX327 camera module.
         variants.
 Load:   dtoverlay=imx327,<param>
 Params: 4lane                   Enable 4 CSI2 lanes. This requires a Compute
-                                Module (1, 3, or 4).
+                                Module (1, 3, 4, or 5) or Pi 5.
         clock-frequency         Sets the clock frequency to match that used on
                                 the board.
                                 Modules from Vision Components use 37.125MHz
@@ -2819,6 +2840,25 @@ Params: 4lane                   Enable 4 CSI2 lanes. This requires a Compute
                                 configuring the sensor (default on)
         cam0                    Adopt the default configuration for CAM0 on a
                                 Compute Module (CSI0, i2c_vc, and cam0_reg).
+
+
+Name:   imx335
+Info:   Sony IMX335 camera module.
+        Uses Unicam 1, which is the standard camera connector on most Pi
+        variants.
+Load:   dtoverlay=imx335,<param>
+Params: orientation             Sensor orientation (0 = front, 1 = rear,
+                                2 = external, default external)
+        rotation                Mounting rotation of the camera sensor (0 or
+                                180, default 0)
+        media-controller        Configure use of Media Controller API for
+                                configuring the sensor (default on)
+        link-frequency          Allowable link frequency values to use in Hz:
+                                594000000 (default), 445500000.
+        cam0                    Adopt the default configuration for CAM0 on a
+                                Compute Module (CSI0, i2c_vc, and cam0_reg).
+        4lane                   Enable 4 CSI2 lanes. This requires a Compute
+                                Module (1, 3, 4, or 5) or Pi 5.
 
 
 Name:   imx378
@@ -2871,6 +2911,9 @@ Params: addr                    Set I2C address of sensor. Valid values are
         cam0                    Adopt the default configuration for CAM0 on a
                                 Compute Module (CSI0, i2c_vc, and cam0_reg).
         vcm                     Enable ad5398 VCM associated with the sensor.
+        clk-37125               Alternative to clock-frequency=37125000 and
+                                link-frequency=445500000 for Waveshare modules
+                                with 37.125MHz clock sources.
 
 
 Name:   imx462
@@ -5051,6 +5094,21 @@ Load:   dtoverlay=tc358743-audio,<param>=<val>
 Params: card-name               Override the default, "tc358743", card name.
 
 
+Name:   tc358743-pi5
+Info:   Toshiba TC358743 HDMI to CSI-2 bridge chip for Pi5.
+        Uses Unicam 1, which is the standard camera connector on most Pi
+        variants.
+Load:   dtoverlay=tc358743-pi5,<param>=<val>
+Params: 4lane                   Use 4 lanes (only applicable to Compute Modules
+                                CAM1 connector).
+
+        link-frequency          Set the link frequency. Only values of 297000000
+                                (574Mbit/s) and 486000000 (972Mbit/s - default)
+                                are supported by the driver.
+        cam0                    Adopt the default configuration for CAM0 on a
+                                Compute Module (CSI0, i2c_vc, and cam0_reg).
+
+
 Name:   tinylcd35
 Info:   3.5" Color TFT Display by www.tinylcd.com
         Options: Touch, RTC, keypad
@@ -5133,6 +5191,18 @@ Name:   uart2
 Info:   Enable uart 2 on GPIOs 0-3. BCM2711 only.
 Load:   dtoverlay=uart2,<param>
 Params: ctsrts                  Enable CTS/RTS on GPIOs 2-3 (default off)
+        rs485                   Enable RS485 mode for using the RTS line to
+                                drive the OE pin of an RS485 transceiver (i.e.
+                                MAX3078E); also enables the UARTx ctsrts
+                                parameter, as RTS is required (default off).
+        rs485_invert_rts        When RS485 mode is enabled, inverts the RTS
+                                line from active-high (default) to active-low.
+        rs485_rts_on_delay      When RS485 mode is enabled, sets the delay (in
+                                milliseconds) between data transmission starting
+                                and the RTS line being asserted (default 0).
+        rs485_rts_off_delay     When RS485 mode is enabled, sets the delay (in
+                                milliseconds) between data transmission ending
+                                and the RTS line being deasserted (default 0).
 
 
 Name:   uart2-pi5
@@ -5145,6 +5215,18 @@ Name:   uart3
 Info:   Enable uart 3 on GPIOs 4-7. BCM2711 only.
 Load:   dtoverlay=uart3,<param>
 Params: ctsrts                  Enable CTS/RTS on GPIOs 6-7 (default off)
+        rs485                   Enable RS485 mode for using the RTS line to
+                                drive the OE pin of an RS485 transceiver (i.e.
+                                MAX3078E); also enables the UARTx ctsrts
+                                parameter, as RTS is required (default off).
+        rs485_invert_rts        When RS485 mode is enabled, inverts the RTS
+                                line from active-high (default) to active-low.
+        rs485_rts_on_delay      When RS485 mode is enabled, sets the delay (in
+                                milliseconds) between data transmission starting
+                                and the RTS line being asserted (default 0).
+        rs485_rts_off_delay     When RS485 mode is enabled, sets the delay (in
+                                milliseconds) between data transmission ending
+                                and the RTS line being deasserted (default 0).
 
 
 Name:   uart3-pi5
@@ -5157,6 +5239,18 @@ Name:   uart4
 Info:   Enable uart 4 on GPIOs 8-11. BCM2711 only.
 Load:   dtoverlay=uart4,<param>
 Params: ctsrts                  Enable CTS/RTS on GPIOs 10-11 (default off)
+        rs485                   Enable RS485 mode for using the RTS line to
+                                drive the OE pin of an RS485 transceiver (i.e.
+                                MAX3078E); also enables the UARTx ctsrts
+                                parameter, as RTS is required (default off).
+        rs485_invert_rts        When RS485 mode is enabled, inverts the RTS
+                                line from active-high (default) to active-low.
+        rs485_rts_on_delay      When RS485 mode is enabled, sets the delay (in
+                                milliseconds) between data transmission starting
+                                and the RTS line being asserted (default 0).
+        rs485_rts_off_delay     When RS485 mode is enabled, sets the delay (in
+                                milliseconds) between data transmission ending
+                                and the RTS line being deasserted (default 0).
 
 
 Name:   uart4-pi5
@@ -5169,6 +5263,18 @@ Name:   uart5
 Info:   Enable uart 5 on GPIOs 12-15. BCM2711 only.
 Load:   dtoverlay=uart5,<param>
 Params: ctsrts                  Enable CTS/RTS on GPIOs 14-15 (default off)
+        rs485                   Enable RS485 mode for using the RTS line to
+                                drive the OE pin of an RS485 transceiver (i.e.
+                                MAX3078E); also enables the UARTx ctsrts
+                                parameter, as RTS is required (default off).
+        rs485_invert_rts        When RS485 mode is enabled, inverts the RTS
+                                line from active-high (default) to active-low.
+        rs485_rts_on_delay      When RS485 mode is enabled, sets the delay (in
+                                milliseconds) between data transmission starting
+                                and the RTS line being asserted (default 0).
+        rs485_rts_off_delay     When RS485 mode is enabled, sets the delay (in
+                                milliseconds) between data transmission ending
+                                and the RTS line being deasserted (default 0).
 
 
 Name:   udrc
@@ -5502,6 +5608,7 @@ Params: 2_8_inch                2.8" 480x640
         6_25_inch               6.25" 720x1560
         8_8_inch                8.8" 480x1920
         7_0_inchC               7.0" C 1024x600
+        7_0_inchH               7.0" H 1280x720
         7_9_inch                7.9" 400x1280
         8_0_inch                8.0" 1280x800
         10_1_inch               10.1" 1280x800
@@ -5511,6 +5618,26 @@ Params: 2_8_inch                2.8" 480x640
         i2c1                    Use i2c-1 with jumper wires from GPIOs 2&3
         disable_touch           Disable the touch controller
         rotation                Set the panel orientation property
+        invx                    Touchscreen inverted x axis
+        invy                    Touchscreen inverted y axis
+        swapxy                  Touchscreen swapped x y axis
+        dsi0                    Use DSI0 and i2c_csi_dsi0 (rather than
+                                the default DSI1 and i2c_csi_dsi).
+
+
+Name:   vc4-kms-dsi-waveshare-panel-v2
+Info:   Enable the Waveshare DSI-TOUCH series screen
+        Requires vc4-kms-v3d to be loaded.
+Load:   dtoverlay=vc4-kms-dsi-waveshare-panel-v2,<param>
+Params: 5_0_inch_a              5.0" 720x1280 2lane
+        5_5_inch_a              5.5" 720x1280 2lane
+        7_0_inch_a              7.0" A 720x1280 2lane
+        7_0_inch_b              7.0" B 720x1280 2lane
+        8_0_inch_a              8.0" 800x1280 2lane
+        8_0_inch_a_4lane        8.0" 800x1280 4lane
+        10_1_inch_a             10.1" 800x1280 2lane
+        10_1_inch_a_4lane       10.1" 800x1280 4lane
+        disable_touch           Disable the touch controller
         invx                    Touchscreen inverted x axis
         invy                    Touchscreen inverted y axis
         swapxy                  Touchscreen swapped x y axis
