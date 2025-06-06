@@ -4617,6 +4617,7 @@
 0x55cfbb0d	group_cpus_evenly	vmlinux	EXPORT_SYMBOL_GPL	
 0x0085803d	platform_irqchip_probe	vmlinux	EXPORT_SYMBOL_GPL	
 0x3142529c	arm_local_intc	vmlinux	EXPORT_SYMBOL_GPL	
+0x85c88363	bcm2836_arm_irqchip_spin_gpu_irq	vmlinux	EXPORT_SYMBOL	
 0x2b3801cc	phy_create_lookup	vmlinux	EXPORT_SYMBOL_GPL	
 0xd78e64ef	phy_remove_lookup	vmlinux	EXPORT_SYMBOL_GPL	
 0xbd1bc0b2	phy_pm_runtime_get	vmlinux	EXPORT_SYMBOL_GPL	

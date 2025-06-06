@@ -4600,6 +4600,7 @@
 0x55cfbb0d	group_cpus_evenly	vmlinux	EXPORT_SYMBOL_GPL	
 0x9ad1ff66	platform_irqchip_probe	vmlinux	EXPORT_SYMBOL_GPL	
 0x3142529c	arm_local_intc	vmlinux	EXPORT_SYMBOL_GPL	
+0x85c88363	bcm2836_arm_irqchip_spin_gpu_irq	vmlinux	EXPORT_SYMBOL	
 0x14f79cdc	pinctrl_dev_get_name	vmlinux	EXPORT_SYMBOL_GPL	
 0x770c2360	pinctrl_dev_get_devname	vmlinux	EXPORT_SYMBOL_GPL	
 0x87ac6655	pinctrl_dev_get_drvdata	vmlinux	EXPORT_SYMBOL_GPL	
