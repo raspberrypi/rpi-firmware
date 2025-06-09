@@ -199,12 +199,14 @@ kernel/drivers/net/usb/usbnet.ko
 kernel/drivers/usb/common/usb-common.ko
 kernel/drivers/usb/core/usbcore.ko
 kernel/drivers/usb/phy/phy-generic.ko
-kernel/drivers/usb/dwc3/dwc3.ko
-kernel/drivers/usb/dwc3/dwc3-haps.ko
-kernel/drivers/usb/dwc3/dwc3-of-simple.ko
 kernel/drivers/usb/host/xhci-hcd.ko
 kernel/drivers/usb/host/xhci-pci.ko
 kernel/drivers/usb/host/xhci-plat-hcd.ko
+kernel/drivers/usb/host/dwc_otg/dwc_otg.ko
+kernel/drivers/usb/host/dwc_common_port/dwc_common_port_lib.ko
+kernel/drivers/usb/dwc3/dwc3.ko
+kernel/drivers/usb/dwc3/dwc3-haps.ko
+kernel/drivers/usb/dwc3/dwc3-of-simple.ko
 kernel/drivers/usb/storage/uas.ko
 kernel/drivers/usb/storage/usb-storage.ko
 kernel/drivers/usb/misc/brcmstb-usb-pinmap.ko
