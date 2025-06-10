@@ -7734,6 +7734,7 @@
 0x74ed88b5	DWC_WORKQ_SCHEDULE	vmlinux	EXPORT_SYMBOL	
 0x13cc491a	DWC_WORKQ_SCHEDULE_DELAYED	vmlinux	EXPORT_SYMBOL	
 0x172ec730	DWC_WORKQ_PENDING	vmlinux	EXPORT_SYMBOL	
+0xd8c682ba	dwc2_pci_ids	vmlinux	EXPORT_SYMBOL_GPL	
 0xee38a8ef	usb_stor_host_template_init	vmlinux	EXPORT_SYMBOL_GPL	USB_STORAGE
 0x1bc3edc2	usb_stor_sense_invalidCDB	vmlinux	EXPORT_SYMBOL_GPL	USB_STORAGE
 0xbbc798a4	usb_stor_transparent_scsi_command	vmlinux	EXPORT_SYMBOL_GPL	USB_STORAGE
@@ -14457,7 +14458,6 @@
 0x2b912ea1	usb_os_desc_prepare_interf_dir	drivers/usb/gadget/libcomposite	EXPORT_SYMBOL	
 0x0439db28	unregister_gadget_item	drivers/usb/gadget/libcomposite	EXPORT_SYMBOL_GPL	
 0x640cc173	alloc_ep_req	drivers/usb/gadget/libcomposite	EXPORT_SYMBOL_GPL	
-0xd8c682ba	dwc2_pci_ids	drivers/usb/dwc2/dwc2	EXPORT_SYMBOL_GPL	
 0xc526bf82	usb_cdc_wdm_register	drivers/usb/class/cdc-wdm	EXPORT_SYMBOL	
 0x98559ec7	usb_serial_claim_interface	drivers/usb/serial/usbserial	EXPORT_SYMBOL_GPL	
 0x7d8849b7	usb_serial_port_softint	drivers/usb/serial/usbserial	EXPORT_SYMBOL_GPL	

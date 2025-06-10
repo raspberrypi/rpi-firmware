@@ -6236,7 +6236,6 @@ alias symbol:__SCK__tp_func_bcache_alloc_fail bcache
 alias symbol:dm_audit_log_bio dm_mod
 alias symbol:fsg_store_cdrom usb_f_mass_storage
 alias symbol:drm_i2c_encoder_commit drm_kms_helper
-alias symbol:dwc2_pci_ids dwc2
 alias symbol:mt2063_attach mt2063
 alias symbol:nf_tproxy_laddr6 nf_tproxy_ipv6
 alias symbol:v4l2_i2c_new_subdev_board videodev

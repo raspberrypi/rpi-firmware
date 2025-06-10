@@ -561,7 +561,6 @@ kernel/drivers/usb/gadget/legacy/g_multi.ko.xz: kernel/drivers/usb/gadget/functi
 kernel/drivers/usb/gadget/legacy/g_webcam.ko.xz: kernel/drivers/usb/gadget/libcomposite.ko.xz
 kernel/drivers/usb/gadget/legacy/g_acm_ms.ko.xz: kernel/drivers/usb/gadget/function/usb_f_mass_storage.ko.xz kernel/drivers/usb/gadget/libcomposite.ko.xz
 kernel/drivers/usb/gadget/libcomposite.ko.xz:
-kernel/drivers/usb/dwc2/dwc2.ko.xz:
 kernel/drivers/usb/mon/usbmon.ko.xz:
 kernel/drivers/usb/class/cdc-acm.ko.xz:
 kernel/drivers/usb/class/usblp.ko.xz:
