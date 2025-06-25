@@ -231,6 +231,7 @@ kernel/drivers/char/xillybus/xillybus_pcie.ko
 kernel/drivers/char/xillybus/xillyusb.ko
 kernel/drivers/char/raspberrypi-gpiomem.ko
 kernel/drivers/gpu/drm/display/drm_display_helper.ko
+kernel/drivers/gpu/drm/panel/panel-lvds.ko
 kernel/drivers/gpu/drm/panel/panel-simple.ko
 kernel/drivers/gpu/drm/panel/panel-ilitek-ili9806e.ko
 kernel/drivers/gpu/drm/panel/panel-ilitek-ili9806e-spi.ko
@@ -244,6 +245,7 @@ kernel/drivers/gpu/drm/panel/panel-waveshare-dsi-v2.ko
 kernel/drivers/gpu/drm/bridge/display-connector.ko
 kernel/drivers/gpu/drm/bridge/simple-bridge.ko
 kernel/drivers/gpu/drm/bridge/tc358762.ko
+kernel/drivers/gpu/drm/bridge/ti-sn65dsi83.ko
 kernel/drivers/gpu/drm/tiny/panel-mipi-dbi.ko
 kernel/drivers/gpu/drm/tiny/hx8357d.ko
 kernel/drivers/gpu/drm/tiny/ili9225.ko
@@ -641,6 +643,7 @@ kernel/drivers/input/joystick/psxpad-spi.ko
 kernel/drivers/input/joystick/sensehat-joystick.ko
 kernel/drivers/input/joystick/xpad.ko
 kernel/drivers/input/touchscreen/ads7846.ko
+kernel/drivers/input/touchscreen/atmel_mxt_ts.ko
 kernel/drivers/input/touchscreen/edt-ft5x06.ko
 kernel/drivers/input/touchscreen/egalax_ts.ko
 kernel/drivers/input/touchscreen/exc3000.ko
