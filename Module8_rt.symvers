@@ -16057,39 +16057,39 @@
 0x32ab0c9d	mmc_spi_get_pdata	drivers/mmc/host/of_mmc_spi	EXPORT_SYMBOL	
 0x4754cd72	mmc_spi_put_pdata	drivers/mmc/host/of_mmc_spi	EXPORT_SYMBOL	
 0x144d6986	cs_dsp_mem_region_name	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
-0x8abf0c56	cs_dsp_init_debugfs	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
-0x6a2a88ed	cs_dsp_cleanup_debugfs	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
-0xa589f458	cs_dsp_coeff_write_acked_control	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
-0x3a22132c	cs_dsp_coeff_write_ctrl	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
-0xe2ac31d3	cs_dsp_coeff_lock_and_write_ctrl	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	
-0x22825407	cs_dsp_coeff_read_ctrl	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
-0x231c629f	cs_dsp_coeff_lock_and_read_ctrl	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	
-0x822ab039	cs_dsp_get_ctl	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
-0x19d6221e	cs_dsp_find_alg_region	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
-0x7a26e768	cs_dsp_adsp1_init	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
-0xc7f608d4	cs_dsp_adsp1_power_up	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
-0x2ccfac98	cs_dsp_adsp1_power_down	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
-0x6554c923	cs_dsp_set_dspclk	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
-0xcf410366	cs_dsp_power_up	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
-0xa719f714	cs_dsp_power_down	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
-0xf41def1a	cs_dsp_run	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
-0xc16623d0	cs_dsp_stop	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
-0xdadb1af2	cs_dsp_adsp2_init	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
-0x866b4a3d	cs_dsp_halo_init	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
-0x11acf8d9	cs_dsp_remove	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
-0x5a0d4541	cs_dsp_read_raw_data_block	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
-0xe8cc0202	cs_dsp_read_data_word	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
-0x9ba0756d	cs_dsp_write_data_word	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
+0x2d983f3d	cs_dsp_init_debugfs	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
+0xd34f78ce	cs_dsp_cleanup_debugfs	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
+0x3ec9a0ff	cs_dsp_coeff_write_acked_control	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
+0xadbafc0f	cs_dsp_coeff_write_ctrl	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
+0x124061ef	cs_dsp_coeff_lock_and_write_ctrl	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	
+0x49b3f60a	cs_dsp_coeff_read_ctrl	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
+0x2ba62fae	cs_dsp_coeff_lock_and_read_ctrl	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	
+0x5163215c	cs_dsp_get_ctl	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
+0xa0b97860	cs_dsp_find_alg_region	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
+0x5efba03f	cs_dsp_adsp1_init	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
+0x38a9ae6a	cs_dsp_adsp1_power_up	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
+0x25a0cec7	cs_dsp_adsp1_power_down	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
+0x0c98a881	cs_dsp_set_dspclk	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
+0x54afdc0d	cs_dsp_power_up	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
+0xadfdd75a	cs_dsp_power_down	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
+0x12cdfc03	cs_dsp_run	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
+0x69e28937	cs_dsp_stop	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
+0x9b5265ec	cs_dsp_adsp2_init	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
+0xdb4cc6f2	cs_dsp_halo_init	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
+0xa3af0308	cs_dsp_remove	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
+0x74d0346a	cs_dsp_read_raw_data_block	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
+0xac0b9d49	cs_dsp_read_data_word	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
+0x9ff4e351	cs_dsp_write_data_word	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
 0x4e5562f8	cs_dsp_remove_padding	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
-0xbd5519a8	cs_dsp_adsp2_bus_error	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
-0x9486a6da	cs_dsp_halo_bus_error	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
-0xc8b51f48	cs_dsp_halo_wdt_expire	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
+0x1432645f	cs_dsp_adsp2_bus_error	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
+0x8a44f1c3	cs_dsp_halo_bus_error	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
+0x39c4261f	cs_dsp_halo_wdt_expire	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
 0x6e0cce2d	cs_dsp_chunk_write	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
 0x9e324cb0	cs_dsp_chunk_flush	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
 0xb6c0d9e7	cs_dsp_chunk_read	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
-0xdcd6d926	cs_dsp_wseq_init	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
-0x397ab30f	cs_dsp_wseq_write	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
-0xf954987f	cs_dsp_wseq_multi_write	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
+0x5c419b60	cs_dsp_wseq_init	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
+0x076a80a5	cs_dsp_wseq_write	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
+0xf7033a0e	cs_dsp_wseq_multi_write	drivers/firmware/cirrus/cs_dsp	EXPORT_SYMBOL_GPL	FW_CS_DSP
 0xf2926e01	rp1_firmware_message	drivers/firmware/rp1-fw	EXPORT_SYMBOL_GPL	
 0x94aca951	rp1_firmware_put	drivers/firmware/rp1-fw	EXPORT_SYMBOL_GPL	
 0xe45534a3	rp1_firmware_get_feature	drivers/firmware/rp1-fw	EXPORT_SYMBOL_GPL	
@@ -17464,13 +17464,13 @@
 0x35858604	arizona_dvfs_up	sound/soc/codecs/snd-soc-arizona	EXPORT_SYMBOL_GPL	
 0xad9739e6	arizona_dvfs_down	sound/soc/codecs/snd-soc-arizona	EXPORT_SYMBOL_GPL	
 0x4e98dd56	arizona_dvfs_sysclk_ev	sound/soc/codecs/snd-soc-arizona	EXPORT_SYMBOL_GPL	
-0x1f7c05c5	arizona_init_dvfs	sound/soc/codecs/snd-soc-arizona	EXPORT_SYMBOL_GPL	
+0x32bab907	arizona_init_dvfs	sound/soc/codecs/snd-soc-arizona	EXPORT_SYMBOL_GPL	
 0x7cbc7c55	arizona_anc_ev	sound/soc/codecs/snd-soc-arizona	EXPORT_SYMBOL_GPL	
 0x250728f0	arizona_clk_ev	sound/soc/codecs/snd-soc-arizona	EXPORT_SYMBOL_GPL	
 0x0da5f234	arizona_set_sysclk	sound/soc/codecs/snd-soc-arizona	EXPORT_SYMBOL_GPL	
 0x8ff7e21d	arizona_dai_ops	sound/soc/codecs/snd-soc-arizona	EXPORT_SYMBOL_GPL	
 0xe8274789	arizona_simple_dai_ops	sound/soc/codecs/snd-soc-arizona	EXPORT_SYMBOL_GPL	
-0x24a6846f	arizona_init_dai	sound/soc/codecs/snd-soc-arizona	EXPORT_SYMBOL_GPL	
+0xc53ba30d	arizona_init_dai	sound/soc/codecs/snd-soc-arizona	EXPORT_SYMBOL_GPL	
 0x859fc5c9	arizona_set_fll_refclk	sound/soc/codecs/snd-soc-arizona	EXPORT_SYMBOL_GPL	
 0x370e9f33	arizona_set_fll	sound/soc/codecs/snd-soc-arizona	EXPORT_SYMBOL_GPL	
 0xec4b7fce	arizona_init_fll	sound/soc/codecs/snd-soc-arizona	EXPORT_SYMBOL_GPL	
@@ -17479,8 +17479,8 @@
 0xf01e09ad	arizona_eq_coeff_put	sound/soc/codecs/snd-soc-arizona	EXPORT_SYMBOL_GPL	
 0xeb9fc521	arizona_lhpf_coeff_put	sound/soc/codecs/snd-soc-arizona	EXPORT_SYMBOL_GPL	
 0x07ea3d5e	arizona_of_get_audio_pdata	sound/soc/codecs/snd-soc-arizona	EXPORT_SYMBOL_GPL	
-0x3a282618	arizona_jack_codec_dev_probe	sound/soc/codecs/snd-soc-arizona	EXPORT_SYMBOL_GPL	
-0x38875372	arizona_jack_codec_dev_remove	sound/soc/codecs/snd-soc-arizona	EXPORT_SYMBOL_GPL	
+0x9e543ba1	arizona_jack_codec_dev_probe	sound/soc/codecs/snd-soc-arizona	EXPORT_SYMBOL_GPL	
+0xe4f40f6b	arizona_jack_codec_dev_remove	sound/soc/codecs/snd-soc-arizona	EXPORT_SYMBOL_GPL	
 0x9a172dbe	arizona_jack_set_jack	sound/soc/codecs/snd-soc-arizona	EXPORT_SYMBOL_GPL	
 0x7d05786f	cs4271_dt_ids	sound/soc/codecs/snd-soc-cs4271	EXPORT_SYMBOL_GPL	
 0x42e71454	cs4271_regmap_config	sound/soc/codecs/snd-soc-cs4271	EXPORT_SYMBOL_GPL	
@@ -17526,31 +17526,31 @@
 0xd01f7915	wm_adsp_fw_get	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
 0xe25d46f0	wm_adsp_fw_put	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
 0x894458f3	wm_adsp_fw_enum	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
-0x1731cdc8	wm_adsp_control_add	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
-0x89407559	wm_adsp_write_ctl	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
-0xf92199d2	wm_adsp_read_ctl	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
-0xf3f012f2	wm_adsp1_init	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
+0x7017a4c8	wm_adsp_control_add	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
+0x577a0dd0	wm_adsp_write_ctl	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
+0xa5865bc5	wm_adsp_read_ctl	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
+0x790f06d1	wm_adsp1_init	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
 0xff391377	wm_adsp1_event	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
 0x7409bb92	wm_adsp2_set_dspclk	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
 0xd06fd3ec	wm_adsp2_preloader_get	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
 0xe22dec09	wm_adsp2_preloader_put	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
-0x7cd599a2	wm_adsp_power_up	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
-0x14bbb068	wm_adsp_power_down	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
+0x51bd3e18	wm_adsp_power_up	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
+0x6efb7f50	wm_adsp_power_down	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
 0xb98befd0	wm_adsp_early_event	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
-0x6f1f5392	wm_adsp_run	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
-0x58b4ae78	wm_adsp_stop	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
+0xacd34b20	wm_adsp_run	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
+0x57ced6ff	wm_adsp_stop	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
 0xb3bd2c22	wm_adsp_event	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
-0xc9204a1b	wm_adsp2_component_probe	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
-0xd77a2e50	wm_adsp2_component_remove	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
-0x5596942e	wm_adsp2_init	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
-0xe62c1dcb	wm_halo_init	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
-0x0860f6de	wm_adsp2_remove	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
-0xaf6d1046	wm_adsp_compr_open	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
+0x22d567bc	wm_adsp2_component_probe	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
+0x491d1e9a	wm_adsp2_component_remove	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
+0xf4aa0e31	wm_adsp2_init	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
+0xc00d967b	wm_halo_init	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
+0x26d09523	wm_adsp2_remove	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
+0xa67fa020	wm_adsp_compr_open	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
 0xb9202ef7	wm_adsp_compr_free	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
 0x427c8b1a	wm_adsp_compr_set_params	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
 0x01d0b1b4	wm_adsp_compr_get_caps	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
 0x0f73e833	wm_adsp_compr_trigger	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
-0x494c00d7	wm_adsp_compr_handle_irq	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
+0x4687f687	wm_adsp_compr_handle_irq	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
 0xec37e58f	wm_adsp_compr_pointer	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
 0xaeaa7d7f	wm_adsp_compr_copy	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
 0xdd3c79ef	wm_adsp2_bus_error	sound/soc/codecs/snd-soc-wm-adsp	EXPORT_SYMBOL_GPL	
