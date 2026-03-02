@@ -234,7 +234,7 @@ Params:
 
         eee                     Enable Energy Efficient Ethernet support for
                                 compatible devices (default "on"). See also
-                                "tx_lpi_timer". Pi3B+ only.
+                                "tx_lpi_timer". Pi3B+, Pi4 and CM4 only.
 
         enable_eeprom           Set to "on" to enable the onboard bootloader
                                 EEPROM by driving GPIO 57 low
@@ -2444,7 +2444,8 @@ Params: addr                    Set the address for the AD799X, ADS7828,
                                 BME280, BME680, BMP280, BMP380, BMP58x, CCS811,
                                 DS1621, HDC100X, HDC3020, JC42, LM75, MCP980x,
                                 MPU6050, MPU9250, MS5637, MS5803, MS5805,
-                                MS5837, MS8607, SHT3x, TMP102 or VEML6030.
+                                MS5837, MS8607, SHT3x, STS3X, TMP102 or
+                                VEML6030.
 
         i2c-bus                 Supports all the standard I2C bus selection
                                 parameters - see "dtoverlay -h i2c-bus"
@@ -2620,6 +2621,9 @@ Params: addr                    Set the address for the AD799X, ADS7828,
 
         scd4x                   Select the Sensirion SCD40/41 CO2 sensors.
 
+        sgp30                   Select the Sensirion SGP30 VOC sensor.
+                                Fixed address 0x58.
+
         sht3x                   Select the Sensirion SHT3x temperature and
                                 humidity sensors. Valid addresses 0x44-0x45,
                                 default 0x44
@@ -2627,6 +2631,9 @@ Params: addr                    Set the address for the AD799X, ADS7828,
         sht4x                   Select the Sensirion SHT4x temperature and
                                 humidity sensors. Valid addresses 0x44-0x45,
                                 default 0x44
+
+        sht85                   Select the Sensirion SHT85 temperature and
+                                humidity sensors. Fixed address 0x44.
 
         shtc3                   Select the Sensirion SHTC3 temperature and
                                 humidity sensors.
@@ -2637,8 +2644,8 @@ Params: addr                    Set the address for the AD799X, ADS7828,
         sps30                   Select the Sensirion SPS30 particulate matter
                                 sensor. Fixed address 0x69.
 
-        sgp30                   Select the Sensirion SGP30 VOC sensor.
-                                Fixed address 0x58.
+        sts3x                   Select the Sensirion STS3X temperature sensors.
+                                Valid addresses 0x4a-0x4b, default 0x4a
 
         tcs3472                 Select the AMS TAOS TCS3472 family of RGBW light
                                 sensors.
@@ -3399,9 +3406,9 @@ Params: s08-spi<n>-<m>-present  4-bit integer, bitmap indicating MCP23S08
 
 
 Name:   mcp2515
-Info:   Configures the MCP2515 CAN controller on spi0/1/2
-        For devices on spi1 or spi2, the interfaces should be enabled
-        with one of the spi1-1/2/3cs and/or spi2-1/2/3cs overlays.
+Info:   Configures the MCP2515 CAN controller on spi0/1/2/3/5
+        For devices on spi1, spi2, spi3 or spi5, the interfaces should be
+        enabled with one of the spi<n>-1/2/3cs overlays.
 Load:   dtoverlay=mcp2515,<param>=<val>
 Params: spi<n>-<m>              Configure device at spi<n>, cs<m>
                                 (boolean, required)
@@ -3860,10 +3867,19 @@ Params: addr                    I2C address of expander. Default
                                 depends on model selected.
         i2c-bus                 Supports all the standard I2C bus selection
                                 parameters - see "dtoverlay -h i2c-bus"
+        max7328                 Select the Maxim MAX7328 (8 bit)
+        max7329                 Select the Maxim MAX7329 (8 bit)
         pcf8574                 Select the NXP PCF8574 (8 bit)
         pcf8574a                Select the NXP PCF8574A (8 bit)
         pcf8575                 Select the NXP PCF8575 (16 bit)
         pca8574                 Select the NXP PCA8574 (8 bit)
+        pca8575                 Select the NXP PCA8575 (16 bit)
+        pca9670                 Select the NXP PCA9670 (8 bit)
+        pca9671                 Select the NXP PCA9671 (16 bit)
+        pca9672                 Select the NXP PCA9672 (8 bit)
+        pca9673                 Select the NXP PCA9673 (16 bit)
+        pca9674                 Select the NXP PCA9674 (8 bit)
+        pca9675                 Select the NXP PCA9675 (16 bit)
 
 
 Name:   pcie-32bit-dma
