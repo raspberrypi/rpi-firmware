@@ -1,6 +1,7 @@
-HASH: fcb540e2855669b13635c7d398f17d9c38ddd0de
+HASH: 1ace86cb0dbe4413f432ed14d79c8488eb17f1f7
 ##############################################################
-WARNING: This update bumps to rpi-6.12.y linux tree
+WARNING: This update bumps to rpi-6.18.y linux tree
+This update will install from the 'next' firmware branch.
 See discussions at:
-https://forums.raspberrypi.com/viewtopic.php?t=379745
+https://forums.raspberrypi.com/viewtopic.php?t=394580
 ##############################################################
